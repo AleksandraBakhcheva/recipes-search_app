@@ -1,7 +1,13 @@
 /* variables */
 
 :root {
+    /* colors */
+    --main-font-color: #D12944;
+    --additional-font-color: #FFFFFF;
 
-
+    /* fonts */
+    --main-font-family: 'Jua', sans-serif;
+    --add-font-family: 'Junge', serif;
+    /* fonts */
 
 }
