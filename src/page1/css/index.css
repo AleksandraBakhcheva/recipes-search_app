@@ -4,3 +4,6 @@
 /* variables and general styles */
 @import url(variables.css);
 @import url(general.css);
+
+/* header style */
+@import url(header.css);
