@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- <script type="module" src="js/index.js"></script> -->
+</head>
+
+<body>
+    <a href="test_login.html"><button type="button">Back</button></a>
+    <div class="container">
+        <div class="form__header">
+            <div>
+                <h2>Registration</h2>
+            </div>
+            <div>
+                <p>Please register to save recipes to your favourites</p>
+            </div>
+        </div>
+        <form>
+            <div class="inputs">
+                <h3>Personal data</h3>
+                <div class="input__box">
+                    <label class="surname" for="surname">Surname<input class="input1" type="text" name="surname"
+                            placeholder="Type your surname" id="surname" />
+                    </label>
+                    <p>Mandatory field.<br>Please use latin or cyrillic symbols</p>
+                </div>
+                <div class="mandatory1 message_color"></div>
+                <div class="input__box">
+                    <label class="name" for="name">Name<input class="input2" type="text" name="name"
+                            placeholder="Type your name" id="name" />
+                    </label>
+                    <p>Mandatory field.<br>Please use latin or cyrillic symbols</p>
+                </div>
+                <div class="mandatory2 message_color"></div>
+                <div class="input__box">
+                    <label class="email" for="email">Email<input class="input3" type="text" name="email"
+                            placeholder="name@example.com" id="email" />
+                    </label>
+                    <p>It is not recommended to specify<br>someone else's or corporate email address</p>
+                </div>
+                <div class="mandatory3 message_color"></div>
+            </div>
+            <div class="divider"></div>
+            <div class="inputs">
+                <h3>Password</h3>
+                <div class="input__box">
+                    <label class="password1" for="password">Create a password<input class="input4" type="password"
+                            name="password" placeholder="Password" id="password" />
+                    </label>
+                    <p>Don't use the same passwords on different websites</p>
+                </div>
+                <div class="mandatory4 message_color"></div>
+                <div class="input__box">
+                    <label class="password2" for="password2">Repeat your password<input class="input5" type="password"
+                            name="password" placeholder="Repeat your password" id="password2" />
+                    </label>
+                </div>
+                <div class="mandatory5 message_color"></div>
+            </div>
+            <div class="divider"></div>
+            <div class="inputs">
+                <h3>Security question (optional)</h3>
+                <div class="input__box">
+                    <label class="security-question" for="question">Security question<input class="question" type="text"
+                            name="question" placeholder="Type security question" id="question" />
+                    </label>
+                </div>
+                <div class="optional1 message_color_1"></div>
+                <div class="input__box">
+                    <label class="security-answer" for="answer">Answer<input class="answer" type="text" name="answer"
+                            placeholder="Enter the answer to the security question" id="answer" />
+                    </label>
+                </div>
+                <div class="optional2 message_color_1"></div>
+                <div class="form__footer">
+                    <button type="submit" class="register__button">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script src="js/index.js"></script>
+
+</html>
