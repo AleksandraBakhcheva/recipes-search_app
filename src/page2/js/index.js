@@ -1,20 +1,29 @@
 import imgMarkerFilled from "../img/bookmark-filled.svg";
 import imgMarkerNonFilled from "../img/bookmark.svg";
 
+let foodImg = document.querySelector(".recipe__food-img");
+let foodName = document.querySelector(".recipe__name");
+let foodArea = document.querySelector(".recipe__area");
+let foodCategory = document.querySelector(".recipe__category");
+let foodTags = document.querySelector(".recipe__tags");
+let foodYouTube = document.querySelector(".recipe__youtube-link");
+let ingridients = document.querySelector(".recipe__ingridients");
+let instruction = document.querySelector(".recipe__instructions");
+const bookmark = document.querySelector(".recipe__marker-btn-img");
+let arrfavorites = [];
+
 async function loadData() {
     let response = await fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772');
     let data = await response.json();
 
-    console.log(data);
+    render(data);
 
-    let foodImg = document.querySelector(".recipe__food-img");
-    let foodName = document.querySelector(".recipe__name");
-    let foodArea = document.querySelector(".recipe__area");
-    let foodCategory = document.querySelector(".recipe__category");
-    let foodTags = document.querySelector(".recipe__tags");
-    let foodYouTube = document.querySelector(".recipe__youtube-link");
-    let ingridients = document.querySelector(".recipe__ingridients");
-    let instruction = document.querySelector(".recipe__instructions");
+    const bookmarkBtn = document.querySelector(".recipe__marker-btn");
+    bookmarkBtn.addEventListener("click", addToFavorites);
+
+}
+
+function render(data) {
 
     foodImg.src = data.meals[0].strMealThumb;
     foodImg.width = 400;
@@ -25,10 +34,12 @@ async function loadData() {
     foodTags.textContent = data.meals[0].strTags;
     foodYouTube.href = data.meals[0].strYoutube;
 
+    //rendering instruction
     const instructionSpace = document.createElement('p');
     instructionSpace.innerHTML = data.meals[0].strInstructions;
     instruction.append(instructionSpace);
 
+    //rendering ingredients
     for (let i = 1; i < 20; i++) {
         if (data.meals[0][`strIngredient${i}`] == "") {
             break;
@@ -44,24 +55,27 @@ async function loadData() {
             ingridients.append(ingridientSpace);
             ingridientSpace.append(ingridient);
             ingridientSpace.append(ingridientLabel);
-
         }
     }
 }
 
-loadData();
-console.log(document.querySelector("button img").src);
+function addToFavorites() {
 
-document.querySelector(".recipe__marker-btn").onclick = function () {
-    //console.log(document.querySelector("button img").src);
-    if (document.querySelector(".recipe__marker-btn-img").src = "img/bookmark.svg") {
-        document.querySelector(".recipe__marker-btn-img").src = imgMarkerFilled;
-        console.log(document.querySelector("button img").src);
+    if (!bookmark.classList.contains('active')) {
+        bookmark.className += ' active';
+        bookmark.src = imgMarkerFilled;
+
+        //function 
+
     } else {
-        document.querySelector(".recipe__marker-btn-img").src = imgMarkerNonFilled;
-        console.log("что за фигня");
+        bookmark.className = 'recipe__marker-btn';
+        bookmark.src = imgMarkerNonFilled;
+
+        //function
     }
 
-
-
 }
+
+
+
+loadData();
