@@ -3,3 +3,5 @@
 
 /* variables and general styles */
 @import url(variables.css);
+
+@import url(recipe.css);
