@@ -3,3 +3,10 @@
 
 /* variables and general styles */
 @import url(variables.css);
+@import url(general.css);
+
+/* header style */
+@import url(header.css);
+
+/*main page */
+@import url(main_page.css);
