@@ -1,0 +1,93 @@
+body {
+    color: #9ea4ac;
+    background-color: rgba(214, 218, 222, 0.5);
+}
+h2, h3 {
+    color: #000000;
+}
+.container {
+    max-width: 60%;
+    margin: 3% auto;
+}
+form {
+    margin: 2% 0;
+    border: 1px solid rgba(214, 218, 222, 0.5);
+    background-color: #ffffff;
+}
+.form__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.divider:empty {
+    height: 25px;
+    background-color: rgba(214, 218, 222, 0.5);;
+}
+.input1, .input2, 
+.input3, 
+.input4, .input5,
+.question, .answer {
+    display: block;
+    margin-top: 1%;
+}
+.surname, .name,
+.email, .password1,
+.password2, .security-question,
+.security-answer {
+    margin-top: 3%;
+}
+.input__box {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+.input__box p {
+    margin-left: -55%;
+    margin-top: 14%;
+    font-size: 0.8rem;
+}
+.message_color {
+    width: 47%;
+    margin-top: 1%;
+    font-size: 0.9rem;
+    color: rgb(192, 17, 17);
+}
+.message_color_1 {
+    width: 47%;
+    margin-top: 1%;
+    font-size: 0.9rem;
+    color: rgba(0, 128, 0, 0.876);
+}
+.inputs {
+    padding: 5% 0 5% 4%;
+}
+.inputs input {
+    min-width: 65%;
+    padding: 3% 0 3% 2%;
+    font-size: 1rem;
+}
+.form__footer {
+    margin-top: 7%;
+}
+.register__button {
+    padding: 2% 6%;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    background: #2589de;
+}
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+}
+    .input__box {
+        grid-template-columns: 100%;
+}
+    .input__box p {
+        margin-left: 0;
+        margin-top: 0;
+}
+    .inputs input {
+        min-width: 90%;
+}}
