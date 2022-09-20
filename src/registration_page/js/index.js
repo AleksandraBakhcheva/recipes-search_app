@@ -92,7 +92,7 @@ inputEmail.addEventListener("keyup", function() {
     isInputValid(EMAILCHECK, inputEmail, '.email', '.mandatory3', INCORRECTLANG);
 });
 
-const PASSWORDCHECK = /^(?=.*\d)(?=.*[a-z])(?=.*[!@#$&*])(?=.*[A-Z])(?=(.*[a-zA-Z]){4}).{8,20}$/;
+const PASSWORDCHECK = /^(?=.*\d)(?=.*[a-z])(?=.*[!@#$&*-?_+><.,%^"'])(?=.*[A-Z])(?=(.*[a-zA-Z]){4}).{8,20}$/;
 
 let inputPassword1 = document.querySelector('.input4');
 inputPassword1.addEventListener("keyup", function() {
