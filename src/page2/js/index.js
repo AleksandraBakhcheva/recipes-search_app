@@ -1,6 +1,13 @@
 import imgMarkerFilled from "../img/bookmark-filled.svg";
 import imgMarkerNonFilled from "../img/bookmark.svg";
 
+//const id = 52959; //для проверки
+//const id = 52771;
+//const id = 53043;
+
+let params = (new URL(document.location)).searchParams;
+const id = Number(params.get("id"));
+
 let foodImg = document.querySelector(".recipe__food-img");
 let foodName = document.querySelector(".recipe__name");
 let foodArea = document.querySelector(".recipe__area");
@@ -10,26 +17,31 @@ let foodYouTube = document.querySelector(".recipe__youtube-link");
 let ingridients = document.querySelector(".recipe__ingridients");
 let instruction = document.querySelector(".recipe__instructions");
 const bookmark = document.querySelector(".recipe__marker-btn-img");
-let arrfavorites = [];
+let arrFavorites = localStorage.getItem('favorites');
 
 async function loadData() {
-    let response = await fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772');
+
+    let response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
     let data = await response.json();
 
     document.title = data.meals[0].strMeal + " Recipe";
-
     render(data);
+    checkFavorites(data);
+
 
     const bookmarkBtn = document.querySelector(".recipe__marker-btn");
-    bookmarkBtn.addEventListener("click", addToFavorites);
-
+    bookmarkBtn.addEventListener("click", function () {
+        addToFavorites(data);
+    });
 }
 
 function render(data) {
 
     foodImg.src = data.meals[0].strMealThumb;
-    foodImg.width = 400;
-
     foodName.textContent = data.meals[0].strMeal;
     foodArea.textContent = data.meals[0].strArea;
     foodCategory.textContent = data.meals[0].strCategory;
@@ -61,23 +73,42 @@ function render(data) {
     }
 }
 
-function addToFavorites() {
-
+function addToFavorites(data) {
     if (!bookmark.classList.contains('active')) {
         bookmark.className += ' active';
         bookmark.src = imgMarkerFilled;
-
-        //function 
-
+        arrFavorites.push(id);
     } else {
         bookmark.className = 'recipe__marker-btn';
         bookmark.src = imgMarkerNonFilled;
+        arrFavorites = arrFavorites.filter(el => el !== id);
+    }
+    localStorage.setItem('favorites', JSON.stringify(arrFavorites));
 
-        //function
+}
+
+function checkFavorites(data) {
+
+    if (arrFavorites) { // если в сторадже что-то есть, то парсим
+        arrFavorites = JSON.parse(arrFavorites);
+        if (arrFavorites.find(el => el == id)) {
+            console.log(arrFavorites.find(el => el == id));
+            bookmark.className += ' active';
+            bookmark.src = imgMarkerFilled;
+        }
+    } else {
+        // если нет, то присвоим дефолтное значение
+        arrFavorites = [];
     }
 
 }
 
-
-
 loadData();
+
+// try {
+//     loadData();
+// } catch (e) {
+//     console.log("error");
+// } finally {
+//     console.log('We do cleanup here');
+// }
