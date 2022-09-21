@@ -2,9 +2,13 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+}
+
 .main__section {
-    height: 90vh;
-    width: 100vw;
+    height: 85vh;
+    width: 100%;
     background: url(../img/image_main.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -29,11 +33,16 @@ body {
 }
 
 /* search input and button */
+.result__section {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 .search__container {
     width: 30%;
     display: flex;
     justify-content: center;
-    margin: 10rem auto;
+    margin: 10rem auto 0 auto;
 }
 
 .search__form {
@@ -90,14 +99,31 @@ body {
     transition: 0.5s;
 }
 
-/* result from api*/
-.result__section {
-    background-color: rgba(221, 201, 167, 0.5);
+.error_message {
+    text-align: center;
+    font-size: 2rem;
+    color: #FFFFFF;
+    text-shadow: 2px 0 2px #000,
+        0 2px 2px #000,
+        -2px 0 2px #000,
+        0 -2px 2px #000;
+    letter-spacing: 0.2em;
+}
 
+.hidden_arrow {
+    display: none;
+    position: absolute;
+    width: 50px;
+    left: 45%;
+    top: 70%;
+}
+
+/* result from api*/
+#result__section {
+    background-color: rgba(221, 201, 167, 0.5);
 }
 
 .result__container {
-    padding-top: 50px;
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -114,7 +140,6 @@ body {
 }
 
 .result__item img {
-    max-width: 100%;
     width: 400px;
 }
 
