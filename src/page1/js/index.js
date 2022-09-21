@@ -22,16 +22,17 @@ function generateHtml(results){
     let generatedHTML = '';
     results.map(result => {
         generatedHTML += `
-        <div class="result-item">
+        <div class="result__item">
             <img src="${result.strMealThumb}" alt="${result.strMeal}">
             <div class="item__details">
-                <h2 class="item-name">'${result.strMeal}'</h2>
-                <h4 class="item-area">'${result.strArea}'</h4>                
-                <h4 class="item-category">'${result.strCategory}'</h4>
-            </div>
-            <div class="view-button">
-                <a href='src/page2/index.html?id=${result.idMeal}'>View recipe</a>
-            </div>
+                <div class="details">
+                    <h2 class="item-name">'${result.strMeal}'</h2>
+                    <h3 class="item-area">'${result.strArea}'</h3>
+                </div>
+                <div class="view-button">
+                    <a href='src/page2/index.html?id=${result.idMeal}'>View recipe</a>
+                </div>
+            </div>            
         </div>`
     })
 result.innerHTML = generatedHTML;
