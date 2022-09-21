@@ -14,7 +14,7 @@ let foodArea = document.querySelector(".recipe__area");
 let foodCategory = document.querySelector(".recipe__category");
 let foodTags = document.querySelector(".recipe__tags");
 let foodYouTube = document.querySelector(".recipe__youtube-link");
-let ingridients = document.querySelector(".recipe__ingridients");
+let ingredients = document.querySelector(".recipe__ingredients");
 let instruction = document.querySelector(".recipe__instructions");
 const bookmark = document.querySelector(".recipe__marker-btn-img");
 let arrFavorites = localStorage.getItem('favorites');
@@ -58,17 +58,17 @@ function render(data) {
         if (data.meals[0][`strIngredient${i}`] == "") {
             break;
         } else {
-            const ingridientSpace = document.createElement('div');
-            const ingridient = document.createElement('input');
-            const ingridientLabel = document.createElement('label');
-            ingridient.setAttribute("type", "checkbox");
-            ingridient.value = data.meals[0][`strIngredient${i}`];
+            const ingredientSpace = document.createElement('div');
+            const ingredient = document.createElement('input');
+            const ingredientLabel = document.createElement('label');
+            ingredient.setAttribute("type", "checkbox");
+            ingredient.value = data.meals[0][`strIngredient${i}`];
             const t = document.createTextNode(data.meals[0][`strMeasure${i}`] + " " + data.meals[0][`strIngredient${i}`]);
-            ingridientLabel.setAttribute("for", ingridient.value);
-            ingridientLabel.appendChild(t);
-            ingridients.append(ingridientSpace);
-            ingridientSpace.append(ingridient);
-            ingridientSpace.append(ingridientLabel);
+            ingredientLabel.setAttribute("for", ingredient.value);
+            ingredientLabel.appendChild(t);
+            ingredients.append(ingredientSpace);
+            ingredientSpace.append(ingredient);
+            ingredientSpace.append(ingredientLabel);
         }
     }
 }

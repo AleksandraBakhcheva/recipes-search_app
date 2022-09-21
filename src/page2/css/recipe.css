@@ -21,7 +21,7 @@ font-size: 20px;
     
 }
 
-.recipe__ingridients, .recipe__instructions {
+.recipe__ingredients, .recipe__instructions {
     padding: 20px;
     border-radius: 20px;
     background-color: #FFFFFF;
