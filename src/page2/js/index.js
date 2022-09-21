@@ -59,6 +59,7 @@ function render(data) {
             break;
         } else {
             const ingredientSpace = document.createElement('div');
+            ingredientSpace.className = "recipe__instructions-forone"
             const ingredient = document.createElement('input');
             const ingredientLabel = document.createElement('label');
             ingredient.setAttribute("type", "checkbox");
