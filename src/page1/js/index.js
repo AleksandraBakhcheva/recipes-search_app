@@ -30,7 +30,7 @@ function generateHtml(results){
                     <h3 class="item-area">'${result.strArea}'</h3>
                 </div>
                 <div class="view-button">
-                    <a href='src/page2/index.html?id=${result.idMeal}'>View recipe</a>
+                    <a href='../page2/index.html?id=${result.idMeal}'>View recipe</a>
                 </div>
             </div>            
         </div>`
