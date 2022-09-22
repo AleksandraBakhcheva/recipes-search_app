@@ -1,6 +1,6 @@
 const IMPORTANTMESSAGE = "Mandatory field";
 const INCORRECTLANG = "Incorrect input";
-const INCORRECTPASSWORD = "The password must contain English letters, numbers, special and different case of characters. The minimum password length is 8 characters";
+const INCORRECTPASSWORD = "The password must contain English letters, numbers, different case and one of special (!^@%=<>+#_$&*) characters. The minimum password length is 8 characters";
 const QUESTION_REPLY = "Please use latin or cyrillic symbols, numbers or special characters. The minimum number of characters is 5";
 const ERRORCOLOR = "rgb(192, 17, 17)";
 const CORRECTCOLOR = "rgba(0, 128, 0, 0.876)";
@@ -91,7 +91,7 @@ inputEmail.addEventListener("keyup", function() {
     isInputValid(EMAILCHECK, inputEmail, '.email', '.mandatory3', INCORRECTLANG);
 });
 
-const PASSWORDCHECK = /^(?=.*\d)(?=.*[a-z])(?=.*[!@#$&*-?_+><.,%^"'])(?=.*[A-Z])(?=(.*[a-zA-Z]){4}).{8,20}$/;
+const PASSWORDCHECK = /^(?=.*\d)(?=.*[a-z])(?=.*[!^@%=<>+#_$&*])(?=.*[A-Z])(?=(.*[a-zA-Z]){4}).{8,20}$/;
 
 let inputPassword1 = document.querySelector('.input4');
 inputPassword1.addEventListener("keyup", function() {
