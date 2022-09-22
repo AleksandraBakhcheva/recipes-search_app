@@ -1,5 +1,5 @@
 .header__container_color {
-    background-color: #ffff;
+    background-color: var(--additional-font-color);
 }
 .header__container {
     display: flex;
@@ -8,7 +8,6 @@
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffff;
     color: var(--main-font-color);
 }
 .logo__img {
@@ -39,36 +38,32 @@
 }
 .menu__link_button {
     padding: 0;
-    background: white;
+    background: var(--additional-font-color);
     border: none;
     cursor: pointer;
 }
 .login__input {
     padding: 5px;
-    border: 0.5px solid rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border: 0.5px solid var(--box-shadow-input-color);
+    box-shadow: 0px 1px 1px var(--box-shadow-input-color);
     border-radius: 5px;
-    color: rgba(0, 0, 0, 0.4);
+    color: var(--border-input-color);
 }
 .login__input:first-child {
     margin-right: 0.2%;
     margin-bottom: 2%;
 }
-.password {
-    margin-left: 96%;
-}
 .button_color {
-    margin: 1% 42%;
-    color: rgba(0, 0, 0, 0.4);
+    margin-left: 34%;
+    color: var(--border-input-color);
 }
 .form label {
     display: inline-flex;
 }
 .login__form {
-    height: 10vh; 
-    padding: 1%; 
+    width: 15vw;
+    height: 9vh; 
     border-radius: 5px; 
-    border: solid 2px var(--main-font-color);
 }
 @media screen and (max-width: 480px), screen and (min-width: 481px) and (max-width: 1023px), screen and (min-width: 1024px) and (max-width: 1200px) {
     .header__container {
@@ -103,7 +98,7 @@
         margin: 0;
     }
     .button_color {
-        margin: 1% 44%;
+        margin: 0 36%;
         font-size: 0.7rem;
     }
 }

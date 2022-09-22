@@ -1,10 +1,10 @@
 body {
-    background-image: url(../images/pizza-on-a-black-table.jpg);
-    
-    background-size: cover;
+    background-image: url(../images/registration-form-background.jpg);
+    background-size: contain;
     color: var(--items-font-color);
 }
 h1, div h2 {
+    text-align: center;
     color: var(--additional-font-color);
 }
 h3 {
@@ -27,7 +27,7 @@ form {
 }
 .divider:empty {
     height: 25px;
-    background-color: var(--main-background-color);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, .7));
 }
 .input1, .input2, 
 .input3, 
@@ -35,9 +35,9 @@ form {
 .question, .answer {
     display: block;
     margin-top: 1%;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px var(--box-shadow-input-color);
     border-radius: 5px;
-    border: 0.5px solid rgba(0, 0, 0, 0.25);
+    border: 0.5px solid var(--box-shadow-input-color);
 }
 .surname, .name,
 .email, .password1,
@@ -64,7 +64,7 @@ form {
     width: 47%;
     margin-top: 1%;
     font-size: 0.9rem;
-    color: rgba(0, 128, 0, 0.876);
+    color: var(--correct-font-color);
 }
 .inputs {
     padding: 5% 0 5% 4%;
@@ -75,7 +75,7 @@ form {
     font-size: 1rem;
 }
 .form__footer {
-    margin-top: 7%;
+    margin-top: 5%;
 }
 .register__button {
     padding: 2% 6%;
@@ -86,6 +86,10 @@ form {
     color: var(--main-font-color);
 }
 @media screen and (max-width: 1024px) {
+    body {
+        background-size: cover;
+        color: var(--items-font-color);
+    }
     .container {
         max-width: 100%;
 }
