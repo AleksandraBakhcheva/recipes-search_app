@@ -20,8 +20,7 @@ async function sendApiRequest(){
     let data = await response.json();
     generateHtml(data.meals);
 }catch (error) {
-    /*errorMessage.innerHTML = `<p>Invalid request</p>`; надо выбрать, где лучше выводить сообщение*/
-    result.innerHTML = `<p>Invalid request</p>`;
+    errorMessage.innerHTML = `<p>Invalid request</p>`;
 }
     searchForm.reset();
     console.log(data);    
