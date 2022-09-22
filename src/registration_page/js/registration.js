@@ -8,8 +8,8 @@ let users = [];
 let passwords = [];
 let names = [];
 
-let form = document.querySelector("form");
-form.addEventListener("submit", function(event) {
+let registrationForm = document.querySelector(".registration__form");
+registrationForm.addEventListener("submit", function(event) {
     event.preventDefault();
     checkInput();
     });
@@ -59,8 +59,7 @@ function checkInput() {
         localStorage.setItem("usernames", JSON.stringify(names));
         localStorage.setItem("useremails", JSON.stringify(users));
         localStorage.setItem("userpasswords", JSON.stringify(passwords));
-        localStorage.setItem("welcomemessage", "Now you are registered. You can sign in");
-        window.location.href = "test_login.html";
+        window.location.href = "../header/header.html";
     } 
 }
 

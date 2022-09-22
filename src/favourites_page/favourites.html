@@ -6,13 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favourites</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <h1>Your favourites</h1>
-    <a href="test_login.html"><button type="button">Back</button></a>
+    <header>
+        <div class="header__container_color">
+            <div class="header__container">
+                <div class="logo">
+                    <a href="../header/header.html">
+                        <img class="logo__img" src="../header/images/logo.svg" alt="logo"></a>
+                </div>
+                <nav class="nav">
+                    <ul class="menu__list">
+                        <li class="sign-in__box"></li>
+                        <li class="menu__item"><a href="../header/header.html" class="menu__link">Home</a></li>
+                        <li class="menu__item"><button class="menu__link menu__link_button">Sign in</button></li>
+                        <li class="menu__item"><a href="../registration_page/registration.html"
+                                class="menu__link">Register</a>
+                        </li>
+                        <li class="menu__item"><a href="favourites.html" class="menu__link">My
+                                Favorites</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
 </body>
 
+<script src="../header/js/header.js"></script>
 <script src="js/favourites.js"></script>
 
 </html>

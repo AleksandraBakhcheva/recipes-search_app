@@ -4,7 +4,7 @@
 .header__container {
     display: flex;
     width: 90vw;
-    height: 15vh;
+    height: 20vh;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +62,7 @@
 }
 .login__form {
     width: 15vw;
-    height: 9vh; 
+    height: 15vh; 
     border-radius: 5px; 
 }
 @media screen and (max-width: 480px), screen and (min-width: 481px) and (max-width: 1023px), screen and (min-width: 1024px) and (max-width: 1200px) {
