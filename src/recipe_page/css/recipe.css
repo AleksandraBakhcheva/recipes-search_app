@@ -1,0 +1,112 @@
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Junge&display=swap');
+
+body {
+    font-style: normal;
+    font-weight: 400;
+    color: var(--main-font-color);
+    font-family: var(--main-font-family);
+}
+
+.recipe {
+    background-color: rgba(221, 201, 167, 0.5);
+    font-style: normal;
+    font-size: 20px;
+}
+.recipe__container  {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    /*padding: 20px;*/
+    
+}
+
+.recipe__media,.recipe__info {
+    margin: 20px;
+}
+.recipe__links {
+   /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;*/
+   
+}
+
+.recipe__instructions,.recipe__ingredients {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    border-radius: 20px;
+}
+
+.recipe__instructions {
+    margin-top: 10px;
+}
+.recipe__food-img {
+    width: 35vw;
+    max-width:600px;
+    min-width:300px;
+    border-radius: 20px;
+}
+
+.recipe__name {
+    font-size: 35px;
+    margin: 10px;
+}
+
+.recipe__info-titles {
+    font-size: 30px;
+    margin: 0 0 20px 0;
+    display: inline;
+}
+
+.recipe__food {
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+.recipe__youtube-img {
+    width: 40px;
+}
+.recipe__marker-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    margin-bottom: 8px;
+}
+
+.recipe__icon {
+    width: 30px;
+}
+
+.recipe__title-btn {
+    display: inline;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.recipe__name-info p {
+    margin: 5px;
+    font-size: 18px;
+}
+.recipe__marker {
+    margin: 10px;
+}
+.recipe__marker-btn-img {
+    width: 40px
+}
+
+.recipe__instructions-forone {
+    margin: 5px 0;
+}
+.recipe__instructions-forone label {
+        margin-left: 20px;
+        display: inline-block;
+}
