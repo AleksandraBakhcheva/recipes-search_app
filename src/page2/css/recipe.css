@@ -1,0 +1,75 @@
+
+.recipe {
+   
+    background-color: rgba(221, 201, 167, 0.5);;
+}
+.recipe__container  {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content:space-around;
+    /*padding: 20px;*/
+    font-family: 'Jua';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+/*line-height: 62px;*/
+}
+
+.recipe__media,.recipe__info {
+    margin: 10px;
+    
+}
+
+.recipe__ingredients, .recipe__instructions {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    border-radius: 20px;
+}
+
+.recipe__instructions {
+    margin-top: 10px;
+}
+.recipe__food-img {
+    border-radius: 20px;
+    width: 500px;
+}
+
+.recipe__name {
+    font-size: 40px;
+    margin: 10px;
+}
+
+.recipe__info-titles {
+
+    font-size: 30px;
+    margin: 0 0 20px 0;
+}
+
+.recipe__food {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recipe__youtube-img {
+    width: 50px;
+}
+.recipe__marker-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+}
+
+.recipe__name-info p {
+    margin: 5px;
+    font-size: 18px;
+}
+.recipe__marker-btn-img {
+    width: 50px
+}
