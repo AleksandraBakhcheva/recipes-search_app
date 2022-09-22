@@ -13,7 +13,7 @@
 
 <body>
     <div class="wrapper">
-        <header>
+        <!--<header>
             <div class="header__container">
                 <div class="logo">
                     <img class="logo__img" src="./img/lets_cook_logo.svg" alt="let's cook">
@@ -35,20 +35,22 @@
                     </ul>
                 </nav>
             </div>
-        </header>
+        </header>-->
         <main>
             <section class="main__section">
                 <p class="slogan">Mastering the art of cooking</p>
                 <div class="search__container">
                     <form class="search__form">
-                        <div class="castom-input">
+                        <div class="custom-input">
                             <input class="search__input" type="text" placeholder="Search for the recipe">
                         </div>
                         <button class="search__button">Search</button>
                     </form>
                 </div>
+                <div class="error_message"></div>
+                <a href="#result__section"><img class="hidden_arrow" src="./img/down-arrow.png" alt="down"></a>
             </section>
-            <section class="result__section">
+            <section id="result__section">
                 <div class="result__container"></div>
 
             </section>
