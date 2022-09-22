@@ -67,10 +67,10 @@
 }
 @media screen and (max-width: 480px), screen and (min-width: 481px) and (max-width: 1023px), screen and (min-width: 1024px) and (max-width: 1200px) {
     .header__container {
-        height: 20vh;
+        height: 30vh;
     }
     .logo__img {
-        margin-top: 55%;
+        margin-top: 100%;
         width: 100%;
     }
     .menu__list {
@@ -85,6 +85,7 @@
         justify-content: space-around;
         height: 4vh;
         width: 90vw;
+        margin-bottom: 9vh;
         padding: 0;
         border: none;
     }
@@ -98,7 +99,7 @@
         margin: 0;
     }
     .button_color {
-        margin: 0 36%;
+        margin: 0 44%;
         font-size: 0.7rem;
     }
 }

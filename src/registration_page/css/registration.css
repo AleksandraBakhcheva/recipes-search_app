@@ -87,8 +87,13 @@ form {
 }
 @media screen and (max-width: 1024px) {
     body {
-        background-size: cover;
+        background-image: url(../images/registration_mobile.jpg);
+        background-size: contain;
+        background-position: bottom;
         color: var(--items-font-color);
+    }
+    .form__header {
+        height: 32vh;
     }
     .container {
         max-width: 100%;
