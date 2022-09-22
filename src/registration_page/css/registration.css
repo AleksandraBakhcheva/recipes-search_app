@@ -1,0 +1,101 @@
+body {
+    background-image: url(../images/pizza-on-a-black-table.jpg);
+    
+    background-size: cover;
+    color: var(--items-font-color);
+}
+h1, div h2 {
+    color: var(--additional-font-color);
+}
+h3 {
+    color: var(--items-font-color);
+}
+.container {
+    max-width: 60%;
+    margin: 3% auto;
+}
+form {
+    margin: 2% 0;
+    border-radius: 5px;
+    background-color: var(--additional-font-color);
+}
+.form__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.divider:empty {
+    height: 25px;
+    background-color: var(--main-background-color);
+}
+.input1, .input2, 
+.input3, 
+.input4, .input5,
+.question, .answer {
+    display: block;
+    margin-top: 1%;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.25);
+}
+.surname, .name,
+.email, .password1,
+.password2, .security-question,
+.security-answer {
+    margin-top: 3%;
+}
+.input__box {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+.input__box p {
+    margin-left: -55%;
+    margin-top: 14%;
+    font-size: 0.8rem;
+}
+.message_color {
+    width: 47%;
+    margin-top: 1%;
+    font-size: 0.9rem;
+    color: var(--main-font-color);
+}
+.message_color_1 {
+    width: 47%;
+    margin-top: 1%;
+    font-size: 0.9rem;
+    color: rgba(0, 128, 0, 0.876);
+}
+.inputs {
+    padding: 5% 0 5% 4%;
+}
+.inputs input {
+    min-width: 65%;
+    padding: 3% 0 3% 2%;
+    font-size: 1rem;
+}
+.form__footer {
+    margin-top: 7%;
+}
+.register__button {
+    padding: 2% 6%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: var(--main-font-color);
+}
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+}
+    .input__box {
+        grid-template-columns: 100%;
+}
+    .input__box p {
+        margin-left: 0;
+        margin-top: 0;
+}
+    .inputs input {
+        min-width: 90%;
+}}

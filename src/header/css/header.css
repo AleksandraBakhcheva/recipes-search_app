@@ -1,3 +1,6 @@
+.header__container_color {
+    background-color: #ffff;
+}
 .header__container {
     display: flex;
     width: 90vw;
