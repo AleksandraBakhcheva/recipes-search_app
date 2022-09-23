@@ -1,9 +1,9 @@
 import imgMarkerFilled from "../img/heart_red.png";
 import imgMarkerNonFilled from "../img/heart.png";
 
-const id = 52959; //для проверки
+//const id = 52959; //для проверки
 //const id = 52771;
-//const id = 53043;
+const id = 53043;
 
 // let params = (new URL(document.location)).searchParams;
 // const id = Number(params.get("id"));
@@ -15,7 +15,7 @@ let foodCategory = document.querySelector(".recipe__category");
 let foodTags = document.querySelector(".recipe__tags");
 let foodYouTube = document.querySelector(".recipe__youtube-link");
 let ingredients = document.querySelector(".recipe__ingredients");
-let instruction = document.querySelector(".recipe__instructions");
+
 const bookmark = document.querySelector(".recipe__marker-btn-img");
 let arrFavorites = localStorage.getItem('favorites');
 
@@ -27,6 +27,11 @@ async function loadData() {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
     let data = await response.json();
+
+    let screen = window.matchMedia("(max-width: 992px)")
+    myFunction(screen) // Call listener function at run time
+    screen.addListener(myFunction) // Attach listener function on state changes
+
 
     document.title = data.meals[0].strMeal + " Recipe";
     render(data);
@@ -49,11 +54,14 @@ function render(data) {
     foodYouTube.href = data.meals[0].strYoutube;
 
     //rendering instruction
+    let instruction = document.querySelector(".recipe__instructions");
+    //console.log(instruction);
     const instructionSpace = document.createElement('p');
     instructionSpace.innerHTML = data.meals[0].strInstructions;
     instruction.append(instructionSpace);
 
     //rendering ingredients
+
     for (let i = 1; i < 20; i++) {
         if (data.meals[0][`strIngredient${i}`] == "") {
             break;
@@ -64,6 +72,7 @@ function render(data) {
             const ingredientLabel = document.createElement('label');
             ingredient.setAttribute("type", "checkbox");
             ingredient.value = data.meals[0][`strIngredient${i}`];
+            ingredient.setAttribute("id", ingredient.value);
             const t = document.createTextNode(data.meals[0][`strMeasure${i}`] + " " + data.meals[0][`strIngredient${i}`]);
             ingredientLabel.setAttribute("for", ingredient.value);
             ingredientLabel.appendChild(t);
@@ -74,26 +83,26 @@ function render(data) {
     }
 }
 
-function addToFavorites(data) {
-    if (!bookmark.classList.contains('active')) {
-        bookmark.className += ' active';
-        bookmark.src = imgMarkerFilled;
-        arrFavorites.push(id);
-    } else {
-        bookmark.className = 'recipe__marker-btn';
-        bookmark.src = imgMarkerNonFilled;
-        arrFavorites = arrFavorites.filter(el => el !== id);
+function addToFavorites(data) { //при нажатии на кнопку
+    if (!bookmark.classList.contains('active')) { //если нет класса active
+        bookmark.className += ' active'; //то добавляем ему этот класс
+        bookmark.src = imgMarkerFilled; // картинка пустая
+        arrFavorites.push(id); //добавляем в массив 
+    } else { //если нет
+        bookmark.className = 'recipe__marker-btn'; //то класс без active
+        bookmark.src = imgMarkerNonFilled; // картинка заполненная
+        arrFavorites = arrFavorites.filter(el => el !== id); //удаляем из массива
     }
     localStorage.setItem('favorites', JSON.stringify(arrFavorites));
 
 }
 
-function checkFavorites(data) {
+function checkFavorites(data) { //вызывается при загрузке страницы
 
     if (arrFavorites) { // если в сторадже что-то есть, то парсим
         arrFavorites = JSON.parse(arrFavorites);
-        if (arrFavorites.find(el => el == id)) {
-            console.log(arrFavorites.find(el => el == id));
+        if (arrFavorites.find(el => el == id)) { //если элемент есть в локал сторадж
+            //console.log(arrFavorites.find(el => el == id));
             bookmark.className += ' active';
             bookmark.src = imgMarkerFilled;
         }
@@ -103,6 +112,24 @@ function checkFavorites(data) {
     }
 
 }
+
+function myFunction(screen) {
+    let Bigscreen = document.querySelector(".bigscreen");
+    console.log(Bigscreen)
+    let Smallscreen = document.querySelector(".smallscreen");
+    console.log(Smallscreen)
+    if (screen.matches) { // If media query matches
+        console.log(screen)
+        Smallscreen.className += ' recipe__instructions';
+        Bigscreen.className = 'bigscreen';
+    } else {
+        console.log(screen)
+        Bigscreen.className += ' recipe__instructions';
+        Smallscreen.className = 'smallscreen';
+    }
+}
+
+
 
 loadData();
 
