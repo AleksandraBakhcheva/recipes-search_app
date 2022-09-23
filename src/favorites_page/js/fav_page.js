@@ -10,7 +10,6 @@ div.textContent = `Welcome ${names[i]}`;
 let result = document.querySelector('.result__container');
 let arrFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
 console.log(arrFavorites);
-console.log(typeof arrFavorites[1]);
 let dataArr = [];
 
 async function getRecipes() {    
