@@ -1,5 +1,3 @@
-//import imgMarkerFilled from "../img/bookmark-filled.svg";
-//import imgMarkerNonFilled from "../img/bookmark.svg";
 // welcome==
 let email = localStorage.getItem("welcomeemail");
 let users = JSON.parse(localStorage.getItem('useremails') || '[]');
@@ -62,15 +60,12 @@ document.addEventListener("DOMContentLoaded", function (){
 
 //bookmark=====
 
-    document.addEventListener('click', function(e){                
-        addFav(e);
-    });
-    document.onclick = function(e) {
+    document.addEventListener('click', function(e){
         if (e.target.classList.contains('recipe__marker-btn-img')){
-            e.target.classList.toggle('active');}
-        
-    }
-
+            e.target.classList.toggle('active');} 
+            addFav(e); 
+    });
+    
     function addFav(e) {
         console.log(e.target.dataset.id);
         if (e.target.classList.contains('active')){
@@ -83,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function (){
         localStorage.setItem('favorites', JSON.stringify(arrFavorites));
        // checkFav(e);
     }
-   /* function checkFav(e) {
+    /* function checkFav(e) {
         if (arrFavorites) { // если в сторадже что-то есть, то парсим
             arrFavorites = JSON.parse(arrFavorites);
             if (arrFavorites.find(el => el == e.target.dataset.id)) {
