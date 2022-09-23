@@ -44,8 +44,6 @@ async function loadData() {
     });
 }
 
-
-
 function addToFavorites(data) { //при нажатии на кнопку
     if (!bookmark.classList.contains('active')) { //если нет класса active
         bookmark.className += ' active'; //то добавляем ему этот класс

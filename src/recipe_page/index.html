@@ -11,7 +11,28 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <div class="header__container_color">
+            <div class="header__container">
+                <div class="logo">
+                    <a href="../header/header.html">
+                        <img class="logo__img" src="../header/images/logo.svg" alt="logo"></a>
+                </div>
+                <nav class="nav">
+                    <ul class="menu__list">
+                        <li class="sign-in__box"></li>
+                        <li class="menu__item"><a href="../header/header.html" class="menu__link">Home</a></li>
+                        <li class="menu__item"><button class="menu__link menu__link_button">Sign in</button></li>
+                        <li class="menu__item"><a href="../registration_page/registration.html"
+                                class="menu__link">Register</a>
+                        </li>
+                        <li class="menu__item"><a href="../favourites_page/favourites.html" class="menu__link">My
+                                Favorites</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <main class="recipe">
         <div class="recipe__container">
             <div class="recipe-big">
@@ -34,6 +55,9 @@
                                         src="img/printer.png" alt="printer" class="recipe__marker-btn-img"></button>
                             </div>
                         </div>
+                    </div>
+                    <div class="recipe__register">
+                        <p>Sign in to add it to your favourites.</p>
                     </div>
                 </div>
                 <div class="recipe__info">
@@ -64,5 +88,7 @@
     </main>
     <footer></footer>
 </body>
+
+<script src="../header/js/header.js"></script>
 
 </html>

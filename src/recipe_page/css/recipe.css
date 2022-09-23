@@ -155,6 +155,16 @@ input[type=checkbox]:checked + label:before {
     display: none;
 }
 
+.recipe__register {
+    background-color: #e6c7c7;
+    border: 1px solid #999;
+    border-radius: 20px;
+    padding: 1px;
+    box-shadow: 1px 1px 5px #8e2222;
+    width: 300px;
+    text-align: center;
+}
+
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
