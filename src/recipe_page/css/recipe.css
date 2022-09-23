@@ -161,7 +161,7 @@ input[type=checkbox]:checked + label:before {
     border-radius: 20px;
     padding: 1px;
     box-shadow: 1px 1px 5px #8e2222;
-    width: 300px;
+    width: 100%;
     text-align: center;
 }
 
