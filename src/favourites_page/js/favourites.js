@@ -1,0 +1,10 @@
+let email = localStorage.getItem("welcomeemail");
+let users = JSON.parse(localStorage.getItem('useremails') || '[]');
+let names = JSON.parse(localStorage.getItem('usernames') || '[]');
+console.log(email);
+console.log(users);
+console.log(names);
+let i = users.indexOf(email);
+let welcomeMsg = document.createElement("div");
+document.querySelector("h1").append(welcomeMsg);
+welcomeMsg.textContent = `Welcome ${names[i]}`;
