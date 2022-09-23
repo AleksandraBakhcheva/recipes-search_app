@@ -13,7 +13,7 @@ let foodName = document.querySelector(".recipe__name");
 let foodArea = document.querySelector(".recipe__area");
 let foodCategory = document.querySelector(".recipe__category");
 let foodTags = document.querySelector(".recipe__tags");
-let foodYouTube = document.querySelector(".recipe__youtube-link");
+
 let ingredients = document.querySelector(".recipe__ingredients");
 
 const bookmark = document.querySelector(".recipe__marker-btn-img");
@@ -28,12 +28,12 @@ async function loadData() {
     }
     let data = await response.json();
 
-    let screen = window.matchMedia("(max-width: 992px)")
-    myFunction(screen) // Call listener function at run time
-    screen.addListener(myFunction) // Attach listener function on state changes
-
-
     document.title = data.meals[0].strMeal + " Recipe";
+
+    let screen = window.matchMedia("(max-width: 992px)")
+    myFunction(screen, data); // Call listener function at run time
+    screen.addListener(myFunction); // Attach listener function on state changes
+
     render(data);
     checkFavorites(data);
 
@@ -44,44 +44,7 @@ async function loadData() {
     });
 }
 
-function render(data) {
 
-    foodImg.src = data.meals[0].strMealThumb;
-    foodName.textContent = data.meals[0].strMeal;
-    foodArea.textContent = data.meals[0].strArea;
-    foodCategory.textContent = data.meals[0].strCategory;
-    foodTags.textContent = data.meals[0].strTags;
-    foodYouTube.href = data.meals[0].strYoutube;
-
-    //rendering instruction
-    let instruction = document.querySelector(".recipe__instructions");
-    //console.log(instruction);
-    const instructionSpace = document.createElement('p');
-    instructionSpace.innerHTML = data.meals[0].strInstructions;
-    instruction.append(instructionSpace);
-
-    //rendering ingredients
-
-    for (let i = 1; i < 20; i++) {
-        if (data.meals[0][`strIngredient${i}`] == "") {
-            break;
-        } else {
-            const ingredientSpace = document.createElement('div');
-            ingredientSpace.className = "recipe__instructions-forone"
-            const ingredient = document.createElement('input');
-            const ingredientLabel = document.createElement('label');
-            ingredient.setAttribute("type", "checkbox");
-            ingredient.value = data.meals[0][`strIngredient${i}`];
-            ingredient.setAttribute("id", ingredient.value);
-            const t = document.createTextNode(data.meals[0][`strMeasure${i}`] + " " + data.meals[0][`strIngredient${i}`]);
-            ingredientLabel.setAttribute("for", ingredient.value);
-            ingredientLabel.appendChild(t);
-            ingredients.append(ingredientSpace);
-            ingredientSpace.append(ingredient);
-            ingredientSpace.append(ingredientLabel);
-        }
-    }
-}
 
 function addToFavorites(data) { //при нажатии на кнопку
     if (!bookmark.classList.contains('active')) { //если нет класса active
@@ -113,7 +76,7 @@ function checkFavorites(data) { //вызывается при загрузке �
 
 }
 
-function myFunction(screen) {
+function myFunction(screen, data) {
     let Bigscreen = document.querySelector(".bigscreen");
     console.log(Bigscreen)
     let Smallscreen = document.querySelector(".smallscreen");
@@ -126,6 +89,46 @@ function myFunction(screen) {
         console.log(screen)
         Bigscreen.className += ' recipe__instructions';
         Smallscreen.className = 'smallscreen';
+    }
+}
+
+function render(data) {
+
+    foodImg.src = data.meals[0].strMealThumb;
+    foodName.textContent = data.meals[0].strMeal;
+    foodArea.textContent = data.meals[0].strArea;
+    foodCategory.textContent = data.meals[0].strCategory;
+    foodTags.textContent = data.meals[0].strTags;
+    let foodYouTube = document.querySelector(".recipe__youtube-link");
+    foodYouTube.href = data.meals[0].strYoutube;
+
+    //rendering instruction
+    let instruction = document.querySelector(".recipe__instructions");
+    //console.log(instruction);
+    const instructionSpace = document.createElement('p');
+    instructionSpace.innerHTML = data.meals[0].strInstructions;
+    instruction.append(instructionSpace);
+
+    //rendering ingredients
+
+    for (let i = 1; i < 20; i++) {
+        if (data.meals[0][`strIngredient${i}`] == "") {
+            break;
+        } else {
+            const ingredientSpace = document.createElement('div');
+            ingredientSpace.className = "recipe__instructions-forone"
+            const ingredient = document.createElement('input');
+            const ingredientLabel = document.createElement('label');
+            ingredient.setAttribute("type", "checkbox");
+            ingredient.value = data.meals[0][`strIngredient${i}`];
+            ingredient.setAttribute("id", ingredient.value);
+            const t = document.createTextNode(data.meals[0][`strMeasure${i}`] + " " + data.meals[0][`strIngredient${i}`]);
+            ingredientLabel.setAttribute("for", ingredient.value);
+            ingredientLabel.appendChild(t);
+            ingredients.append(ingredientSpace);
+            ingredientSpace.append(ingredient);
+            ingredientSpace.append(ingredientLabel);
+        }
     }
 }
 
