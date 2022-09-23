@@ -57,9 +57,15 @@ img {
     line-height: 25px;
 }
 
-.bookmark {
+.recipe__marker {
     width: 38px;
     justify-self: center;
+}
+
+.recipe__marker-btn {
+    width: 50px;
+    background: transparent;
+    border: none;
 }
 
 .view-button {
