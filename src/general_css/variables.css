@@ -1,0 +1,18 @@
+/* variables */
+
+:root {
+    /* colors */
+    --main-font-color: #D12944;
+    --additional-font-color: #FFFFFF;
+    --items-font-color: rgba(0, 0, 0, 0.8);
+    --main-background-color: rgba(221, 201, 167, 0.5);
+    --button-font-color: rgba(255, 255, 255, 0.9);
+    --box-shadow-input-color: rgba(0, 0, 0, 0.25);
+    --border-input-color: rgba(0, 0, 0, 0.4);
+    --correct-font-color: rgba(0, 128, 0, 0.876);
+
+    /* fonts */
+    --main-font-family: 'Jua', sans-serif;
+    --add-font-family: 'Junge', serif;
+    /* fonts */
+}
