@@ -79,3 +79,9 @@
         line-height: 20px;
     }
 }
+
+@media screen and (max-height: 757px) and (min-width: 767px) {
+    .hidden_arrow {
+        opacity: 0;
+    }
+}

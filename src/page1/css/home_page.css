@@ -115,7 +115,7 @@ img {
     position: absolute;
     width: 50px;
     left: 45%;
-    top: 70%;
+    bottom: 5%;
 }
 
 /* result from api*/
