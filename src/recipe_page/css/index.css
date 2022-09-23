@@ -1,0 +1,10 @@
+/* normalize.css */
+@import url(https://necolas.github.io/normalize.css/latest/normalize.css);
+
+/* variables and general styles */
+@import url(variables.css);
+
+@import url(recipe.css);
+
+/* header style */
+@import url(../../header/css/header.css);

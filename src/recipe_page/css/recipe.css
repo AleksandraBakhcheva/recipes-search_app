@@ -1,0 +1,228 @@
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Junge&display=swap');
+
+body {
+    font-style: normal;
+    font-weight: 400;
+    color: var(--main-font-color);
+    font-family: var(--main-font-family);
+}
+
+.recipe {
+    background-color: rgba(218, 202, 174, 0.5);
+    font-style: normal;
+    font-size: 16px;
+}
+.recipe__container  {
+    margin: 0 auto;
+    width: 90%;
+    
+    /*padding: 20px;*/
+    
+}
+
+.recipe-big {
+    display: flex;
+    justify-content: space-between;;
+}
+
+.recipe__media,.recipe__info {
+    margin: 30px 15px 15px 0;
+}
+.recipe__info {
+    margin: 30px 0px 30px 15px;
+}
+.recipe__links {
+   /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;*/
+   
+}
+
+.recipe__instructions,.recipe__ingredients {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    border-radius: 20px;
+}
+
+.recipe__ingredients {
+    margin-bottom: 30px;
+}
+.recipe__instructions{
+    line-height: 1.5em;
+}
+
+.recipe__instructions p {
+    margin: 0;
+}
+
+.recipe__food-img {
+    width: 35vw;
+    max-width:600px;
+    min-width:350px;
+    border-radius: 20px;
+}
+
+.recipe__name {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.recipe__info-titles {
+    font-size: 25px;
+    margin: 0 0 20px 0;
+    display: inline;
+}
+
+.recipe__food {
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+.recipe__youtube-img {
+    width: 40px;
+}
+.recipe__marker-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    
+}
+
+.recipe__ingredients-btn {
+    margin-bottom: 8px;
+}
+
+.recipe__icon {
+    width: 30px;
+}
+
+.recipe__title-btn {
+    display: inline;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.recipe__name-info p {
+    margin: 0;
+    font-size: 16px;
+}
+.recipe__marker {
+    margin: 10px;
+}
+.recipe__marker-btn-img {
+    width: 40px
+}
+
+.recipe__instructions-forone {
+    margin: 10px 0;
+}
+.recipe__instructions-forone label {
+    display: inline-block;
+}
+input[type=checkbox], input[type=radio] {display: none;}
+
+input[type=checkbox] + label:before {
+    content: "\2714";
+    color: transparent;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 22px;
+    margin: -5px 20px 0 0;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+}
+
+input[type=checkbox]:checked + label:before {
+    color: #000;
+    border-color: #000;
+}
+
+.smallscreen {
+    display: none;
+}
+
+.recipe__register {
+    background-color: #e6c7c7;
+    border: 1px solid #999;
+    border-radius: 20px;
+    padding: 1px;
+    box-shadow: 1px 1px 5px #8e2222;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+    .recipe__container {
+        padding-bottom: 30px;
+    }
+    .smallscreen {
+        display: block;
+        
+    }
+    .bigscreen {
+        display: none;
+    }
+    .recipe__food-img {
+        width: 35vw;
+        max-width:600px;
+        min-width:250px;
+        border-radius: 20px;
+    }
+    .recipe__media,.recipe__info {
+        margin: 30px 15px 15px 0;
+    }
+    .recipe__info {
+        margin: 30px 0 30px 15px;
+        flex-grow: 3;
+    }
+    .recipe__ingredients {
+        margin: 0;
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .recipe-big {
+        display: block;
+    }
+    .recipe__media,.recipe__info, .recipe-big {
+        margin: 0 0 15px 0;
+    }
+    .recipe__media {
+        margin-top: 15px;
+    }
+    .recipe__container {
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    .recipe__food-img {
+        width: 100%;
+        
+        border-radius: 20px;
+    }
+    .recipe__marker-printer {
+        display: none;
+    }
+}
