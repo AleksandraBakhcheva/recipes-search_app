@@ -66,10 +66,9 @@ async function sendApiRequest(){
     let data = await response.json();
     generateHtml(data.meals);
 }catch (error) {
-    errorMessage.innerHTML = `<p>Invalid request</p>`;
+    errorMessage.innerHTML = `<p>Nothing found</p>`;
 }
-    searchForm.reset();
-    console.log(data);    
+    searchForm.reset();   
 }
 //render по поиску
 function generateHtml(results){
@@ -93,7 +92,7 @@ function generateHtml(results){
         </div>`
     })
     if (input.value == 0){
-        errorMessage.innerHTML = `<p>There's nothing to search</p>`
+        errorMessage.innerHTML = `<p>Please, enter your search request</p>`
     }else{
         arrow.style.display = "block";
 result.innerHTML = generatedHTML;
