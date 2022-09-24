@@ -47,7 +47,7 @@ function renderFav(dataArr){
                                     class="recipe__marker-btn-img" data-id=${dataArr[d].idMeal}></button>
                         </div>
                         <div class="view-button">
-                            <a href='../page2/index.html?id=${dataArr[d].idMeal}'>View recipe</a>
+                            <a href='../recipe_page/index.html?id=${dataArr[d].idMeal}'>View recipe</a>
                         </div>
                     </div>            
                 </div>`

@@ -45,7 +45,7 @@ function renderRandom(results){
                     <h3 class="item-area">${data.meals[0].strArea}</h3>
                 </div>
                 <div class="view-button">
-                    <a href='page2/index.html?id=${data.meals[0].idMeal}'>View recipe</a>
+                    <a href='recipe_page/index.html?id=${data.meals[0].idMeal}'>View recipe</a>
                 </div>
             </div>            
         </div>`
@@ -86,7 +86,7 @@ function generateHtml(results){
                     <h3 class="item-area">${result.strArea}</h3>
                 </div>
                 <div class="view-button">
-                    <a href='page2/index.html?id=${result.idMeal}'>View recipe</a>
+                    <a href='recipe_page/index.html?id=${result.idMeal}'>View recipe</a>
                 </div>
             </div>            
         </div>`
