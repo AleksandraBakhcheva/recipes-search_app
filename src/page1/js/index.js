@@ -15,13 +15,26 @@ document.addEventListener("DOMContentLoaded", function (){
 //запрос для вывода рандомных рецептов
 async function getRandom(){    
     try{
-        //нужен цикл
+    // цикл
+    let i = 0;
+    while (i < 5) { 
     let response = await fetch (`https://www.themealdb.com/api/json/v1/1/random.php`)
     console.log(response)
     let data = await response.json();
     console.log(data.meals[0]);
-    //randomArr.push(data.meals[0]);
-    //generateHtml(data.meals);
+    randomArr.push(data.meals[0]);
+    i++;
+    }
+    console.log(randomArr);
+    renderRandom(randomArr);
+    
+    }catch (error) {
+        console.log(error.message);//?
+    }
+}
+console.log(randomArr);
+// render рандомных рецептов
+function renderRandom(results){
     let generatedHTML = '';
     generatedHTML += `
         <div class="result__item">
@@ -37,13 +50,7 @@ async function getRandom(){
             </div>            
         </div>`
         result.innerHTML = generatedHTML;
-}catch (error) {
-        console.log(error.message);
-    }
 }
-// render рандомного рецепта
-//function renderRandom(results){
-    
 //==
 
 // поиск рецептов по клику на search
