@@ -1,0 +1,86 @@
+body {
+    overflow-x: hidden;
+    font-family: var(--main-font-family);
+    background-color: var(--main-background-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+.fav_title,
+.welcome-msg {
+    text-align: center;
+}
+
+/* result from local storage*/
+
+.result__container {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem;
+    grid-gap: 25px;
+}
+
+.result__item {
+    max-width: 450px;
+    align-content: center;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.result__item img {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.item__details {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details {
+    display: block;
+    color: var(--items-font-color);
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+.recipe__marker {
+    width: 38px;
+    justify-self: center;
+}
+
+.recipe__marker-btn {
+    width: 50px;
+    background: transparent;
+    border: none;
+}
+
+.view-button {
+    display: flex;
+    width: 130px;
+    padding: 10px 0;
+    background: var(--main-font-color);
+    box-shadow: 0px 4px 4px var(--box-shadow-input-color);
+    border-radius: 5px;
+    text-align: center;
+    justify-self: end;
+}
+
+.view-button:hover {
+    box-shadow: 0px 2px 2px var(--box-shadow-input-color);
+    transform: scale(0.99);
+    transition: 0.5s;
+}
+
+.view-button a {
+    text-decoration: none;
+    margin: 0 auto;
+    color: var(--button-font-color);
+    font-size: 1.25rem;
+}
