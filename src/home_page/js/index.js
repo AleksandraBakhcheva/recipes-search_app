@@ -17,7 +17,7 @@ async function getRandom(){
     try{
     // цикл
     let i = 0;
-    while (i < 5) { 
+    while (i < 15) { 
     let response = await fetch (`https://www.themealdb.com/api/json/v1/1/random.php`)
     console.log(response)
     let data = await response.json();
@@ -32,20 +32,21 @@ async function getRandom(){
         console.log(error.message);//?
     }
 }
-console.log(randomArr);
 // render рандомных рецептов
-function renderRandom(results){
+function renderRandom(randomArr){
     let generatedHTML = '';
+    //result.innerHTML = '';
+    for (let r = 0; r < randomArr.length; r++)
     generatedHTML += `
         <div class="result__item">
-            <img src="${data.meals[0].strMealThumb}" alt="${data.meals[0].strMeal}">
+            <img src="${randomArr[r].strMealThumb}" alt="${randomArr[r].strMeal}">
             <div class="item__details">
                 <div class="details">
-                    <h2 class="item-name">${data.meals[0].strMeal}</h2>
-                    <h3 class="item-area">${data.meals[0].strArea}</h3>
+                    <h2 class="item-name">${randomArr[r].strMeal}</h2>
+                    <h3 class="item-area">${randomArr[r].strArea}</h3>
                 </div>
                 <div class="view-button">
-                    <a href='recipe_page/index.html?id=${data.meals[0].idMeal}'>View recipe</a>
+                    <a href='recipe_page/index.html?id=${randomArr[r].idMeal}'>View recipe</a>
                 </div>
             </div>            
         </div>`
@@ -67,6 +68,7 @@ async function sendApiRequest(){
     generateHtml(data.meals);
 }catch (error) {
     errorMessage.innerHTML = `<p>Nothing found</p>`;
+    result.innerHTML = '';
 }
     searchForm.reset();   
 }
@@ -74,7 +76,7 @@ async function sendApiRequest(){
 function generateHtml(results){
     let generatedHTML = ''; 
     errorMessage.innerHTML = '';
-    result.innerHTML = '';
+   // result.innerHTML = '';
     arrow.style.display = "none";   
     results.map(result => {
         generatedHTML += `
