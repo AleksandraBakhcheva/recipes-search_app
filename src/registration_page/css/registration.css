@@ -87,10 +87,8 @@ form {
 }
 @media screen and (max-width: 768px) {
     body {
-        
         background-image: url(../images/mobile-background.png);
         background-size: contain;
-        
     }
     .form__header {
         height: 43vh;
