@@ -54,15 +54,16 @@
     margin-bottom: 2%;
 }
 .button_color {
-    margin-left: 34%;
     color: var(--border-input-color);
 }
 .form label {
     display: inline-flex;
 }
 .login__form {
-    width: 15vw;
+    display: flex;
+    width: 36vw;
     height: 15vh; 
+    align-items: center;
     border-radius: 5px; 
 }
 @media screen and (max-width: 480px), screen and (min-width: 481px) and (max-width: 1023px), screen and (min-width: 1024px) and (max-width: 1200px) {
@@ -87,7 +88,10 @@
         width: 90vw;
         margin-bottom: 9vh;
         padding: 0;
-        border: none;
+        border: none
+    }
+    .form {
+        margin-bottom: 1%;
     }
     .login__input {
         width: 44vw;
@@ -99,8 +103,11 @@
         margin: 0;
     }
     .button_color {
-        margin: 0 44%;
         font-size: 0.7rem;
+    }
+    .wrong_login_email_message {
+        font-size: 0.7rem;
+        margin-bottom: 0;
     }
 }
 @media screen and (min-width: 481px) and (max-width: 1023px) {

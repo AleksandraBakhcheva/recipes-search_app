@@ -24,6 +24,7 @@ form.addEventListener("submit", function(event) {
     let email = document.querySelector(".login__input").value;
     let password = document.querySelector(".password").value;
     let users = JSON.parse(localStorage.getItem('useremails') || '[]');
+    console.log(users);
     let passwords = JSON.parse(localStorage.getItem('userpasswords') || '[]');
     for (let i = 0; i < users.length; i++) {
         if (email === users[i] && password === passwords[i]) {
@@ -31,13 +32,18 @@ form.addEventListener("submit", function(event) {
             window.location.href = "../favourites_page/favourites.html";
             break;
         }
-    else if (email !== users[i] || password !== passwords[i]) {
-        div.textContent = "Your email or password are not correct. Please try again";
-        div.style.color = "rgb(192, 17, 17)";
-        setTimeout(() => {
-            div.textContent = "";
-        }, "4000");
-    }}
+        else if (email !== users[i] || password !== passwords[i] ) {
+        div.textContent = "Your email or password are not correct. Please try again...";
+        }
+    }
+    if (users.length === 0 || passwords.length === 0) {
+        div.textContent = "You're not registered. Please register first";
+    }
+    div.classList.add("wrong_login_email_message");
+    div.style.color = "rgb(192, 17, 17)";
+    setTimeout(() => {
+        div.textContent = "";
+    }, "5000");
     document.querySelector(".login__input").value = "";
     document.querySelector(".password").value = "";
 });
