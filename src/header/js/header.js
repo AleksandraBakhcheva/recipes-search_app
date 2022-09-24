@@ -16,7 +16,7 @@ button.addEventListener("click", function() {
 });
 
 let div = document.createElement("div");
-document.querySelector(".login__form").append(div);
+document.querySelector(".login__form").prepend(div);
 
 let form = document.querySelector(".form");
 form.addEventListener("submit", function(event) {

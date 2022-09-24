@@ -71,12 +71,13 @@
         height: 30vh;
     }
     .logo__img {
-        margin-top: 100%;
+        margin-top: 70%;
         width: 100%;
     }
     .menu__list {
         flex-direction: column;
         align-items: flex-end;
+        margin: 0;
     }
     .menu__link {
         font-size: 1rem;
@@ -86,12 +87,12 @@
         justify-content: space-around;
         height: 4vh;
         width: 90vw;
-        margin-bottom: 9vh;
         padding: 0;
         border: none
     }
     .form {
-        margin-bottom: 1%;
+        margin-top: -18%;
+        margin-right: 3%;
     }
     .login__input {
         width: 44vw;
@@ -107,7 +108,7 @@
     }
     .wrong_login_email_message {
         font-size: 0.7rem;
-        margin-bottom: 0;
+        margin-top: -14%;
     }
 }
 @media screen and (min-width: 481px) and (max-width: 1023px) {
@@ -116,14 +117,19 @@
         width: 90%;
     }
     .button_color {
-        margin: 1% 46%;
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+    .form {
+        margin-top: -14%;
     }
     .login__input {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .menu__link {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+    }
+    .wrong_login_email_message {
+        font-size: 1.2rem;
     }
 }
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
@@ -132,13 +138,18 @@
         width: 90%;
     }
     .button_color {
-        margin: 1% 47%;
-        font-size: 1rem;
+        font-size: 1.5rem;
+    }
+    .form {
+        margin-top: -12%;
     }
     .login__input {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     .menu__link {
+        font-size: 2rem;
+    }
+    .wrong_login_email_message {
         font-size: 1.5rem;
     }
 }
