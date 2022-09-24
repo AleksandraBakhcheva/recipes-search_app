@@ -59,7 +59,7 @@ function checkInput() {
         localStorage.setItem("usernames", JSON.stringify(names));
         localStorage.setItem("useremails", JSON.stringify(users));
         localStorage.setItem("userpasswords", JSON.stringify(passwords));
-        window.location.href = "../header/header.html";
+        window.location.href = "../index.html";
     } 
 }
 
