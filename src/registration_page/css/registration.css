@@ -1,6 +1,6 @@
 body {
-    background-image: url(../images/registration-form-background.jpg);
-    background-size: contain;
+    background-image: url(../images/registration-form-background.jpeg);
+    background-size: cover;
     color: var(--items-font-color);
 }
 h1, div h2 {
@@ -85,26 +85,32 @@ form {
     border-radius: 5px;
     color: var(--main-font-color);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
     body {
-        background-image: url(../images/registration_mobile.jpg);
+        background-image: url(../images/mobile-background.png);
         background-size: contain;
-        background-position: bottom;
-        color: var(--items-font-color);
     }
     .form__header {
-        height: 32vh;
+        height: 43vh;
     }
     .container {
         max-width: 100%;
-}
+        margin: 26% auto;
+    }
+    h1 {
+        margin-top: -78%;
+    }
+    div h2 {
+        margin-top: -12%;
+    }
     .input__box {
         grid-template-columns: 100%;
-}
+    }
     .input__box p {
         margin-left: 0;
         margin-top: 0;
-}
+    }
     .inputs input {
         min-width: 90%;
-}}
+    }
+}
