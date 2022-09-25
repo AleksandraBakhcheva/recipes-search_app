@@ -155,7 +155,7 @@ input[type=checkbox]:checked + label:before {
     display: none;
 }
 
-.recipe__register {
+.recipe__message {
     background-color: #e6c7c7;
     border: 1px solid #999;
     border-radius: 20px;
@@ -165,7 +165,9 @@ input[type=checkbox]:checked + label:before {
     text-align: center;
 }
 
-
+.bigscreen {
+    display: block;
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {}
@@ -182,9 +184,9 @@ input[type=checkbox]:checked + label:before {
         display: block;
         
     }
-    .bigscreen {
+     .bigscreen {
         display: none;
-    }
+    } 
     .recipe__food-img {
         width: 35vw;
         max-width:600px;

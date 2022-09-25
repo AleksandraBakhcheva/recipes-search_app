@@ -76,17 +76,17 @@ function checkFavorites(data) { //вызывается при загрузке �
 
 function myFunction(screen, data) {
     let Bigscreen = document.querySelector(".bigscreen");
-    console.log(Bigscreen)
+    //console.log(Bigscreen)
     let Smallscreen = document.querySelector(".smallscreen");
-    console.log(Smallscreen)
+    //console.log(Smallscreen)
     if (screen.matches) { // If media query matches
-        console.log(screen)
-        Smallscreen.className += ' recipe__instructions';
-        Bigscreen.className = 'bigscreen';
+        //console.log(screen)
+        //Smallscreen.className += ' recipe__instructions';
+        //recipe__instructions.className += 'bigscreen';
     } else {
-        console.log(screen)
-        Bigscreen.className += ' recipe__instructions';
-        Smallscreen.className = 'smallscreen';
+        //console.log(screen)
+        // Bigscreen.className += ' recipe__instructions';
+        //recipe__instructions.className += 'smallscreen';
     }
 }
 
@@ -101,11 +101,14 @@ function render(data) {
     foodYouTube.href = data.meals[0].strYoutube;
 
     //rendering instruction
-    let instruction = document.querySelector(".recipe__instructions");
-    //console.log(instruction);
-    const instructionSpace = document.createElement('p');
-    instructionSpace.innerHTML = data.meals[0].strInstructions;
-    instruction.append(instructionSpace);
+    let instructions = document.querySelectorAll(".recipe__instructions");
+    for (let index = 0; index < instructions.length; index++) {
+        const instructionSpace = document.createElement('p');
+        instructionSpace.innerHTML = data.meals[0].strInstructions;
+        instructions[index].append(instructionSpace);
+    }
+
+
 
     //rendering ingredients
 
@@ -133,6 +136,11 @@ function render(data) {
 
 
 loadData();
+
+const login = "inga";
+const message = document.querySelector(".recipe__message");
+
+addEventListener('mouseout', (event) => {});
 
 // try {
 //     loadData();
