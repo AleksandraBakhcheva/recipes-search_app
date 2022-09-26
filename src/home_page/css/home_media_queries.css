@@ -81,7 +81,9 @@
 }
 
 @media screen and (max-height: 757px) and (min-width: 767px) {
-    .hidden_arrow {
-        opacity: 0;
+
+    .search__container {
+        margin: 4rem auto 0 auto;
     }
+
 }
