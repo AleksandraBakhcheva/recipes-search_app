@@ -1,5 +1,5 @@
-//import imgMarkerFilled from "../img/heart_red.png";
-//import imgMarkerNonFilled from "../img/heart.png";
+import imgMarkerFilled from "../img/heart_red.png";
+import imgMarkerNonFilled from "../img/heart.png";
 
 //const id = 52959; //для проверки
 //const id = 52771;

@@ -5,6 +5,9 @@
 /* header style */
 @import url(../../header/css/header.css);
 
-@import url(recipe.css);
+/* footer style */
+@import url(../../footer/footer.css);
 
+/* recipe style */
+@import url(recipe.css);
 @import url(print.css);
