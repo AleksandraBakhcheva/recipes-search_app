@@ -1,15 +1,5 @@
-
-/* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Jua&family=Junge&display=swap');
-
-body {
-    font-style: normal;
-    font-weight: 400;
-    color: var(--main-font-color);
-    font-family: var(--main-font-family);
-}
-
 .recipe {
+    color: var(--items-font-color);
     background-color: rgba(218, 202, 174, 0.5);
     font-style: normal;
     font-size: 16px;
@@ -17,9 +7,6 @@ body {
 .recipe__container  {
     margin: 0 auto;
     width: 90%;
-    
-    /*padding: 20px;*/
-    
 }
 
 .recipe-big {

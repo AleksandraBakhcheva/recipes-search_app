@@ -1,4 +1,4 @@
-/* @media print {
+@media print {
     
   body {
     margin: 10px;
@@ -41,4 +41,4 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-} */
+} 

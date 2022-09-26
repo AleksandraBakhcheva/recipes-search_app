@@ -1,12 +1,12 @@
-import imgMarkerFilled from "../img/heart_red.png";
-import imgMarkerNonFilled from "../img/heart.png";
+//import imgMarkerFilled from "../img/heart_red.png";
+//import imgMarkerNonFilled from "../img/heart.png";
 
-const id = 52959; //для проверки
+//const id = 52959; //для проверки
 //const id = 52771;
 //const id = 53043;
 
-// let params = (new URL(document.location)).searchParams;
-// const id = Number(params.get("id"));
+let params = (new URL(document.location)).searchParams;
+const id = Number(params.get("id"));
 
 let foodImg = document.querySelector(".recipe__food-img");
 let foodName = document.querySelector(".recipe__name");
@@ -17,7 +17,6 @@ let ingredients = document.querySelector(".recipe__ingredients");
 const bookmark = document.querySelector(".recipe__marker-btn-img");
 
 let email = localStorage.getItem("welcomeemail");
-//let email = "sasha@mail.ru"; //для проверки
 let arrFavorites = localStorage.getItem('favorites');
 
 async function loadData() {
@@ -73,11 +72,11 @@ function addToFavorites(data) { //при нажатии на кнопку
         {
             if (!bookmark.classList.contains('active')) { //если нет класса active
                 bookmark.className += ' active'; //то добавляем ему этот класс
-                bookmark.src = imgMarkerFilled; // картинка пустая
+                bookmark.src = imgMarkerFilled;
                 arrFavorites[index].favRecipes.push(id);
             } else {
                 bookmark.className = 'recipe__marker-btn'; //то класс без active
-                bookmark.src = imgMarkerNonFilled; // картинка заполненная
+                bookmark.src = imgMarkerNonFilled;
                 arrFavorites[index].favRecipes = arrFavorites[index].favRecipes.filter((el) => el !== id); //удаляем из массива
             }
         }
