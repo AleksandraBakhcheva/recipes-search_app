@@ -85,8 +85,9 @@
     .login__form {
         display: inline-flex;
         justify-content: space-around;
-        height: 4vh;
+        height: 2vh;
         width: 90vw;
+        margin-top: 10%;
         padding: 0;
         border: none
     }
