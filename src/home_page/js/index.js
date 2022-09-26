@@ -30,6 +30,8 @@ async function getRandom(){
     
     }catch (error) {
         console.log(error.message);//?
+    }finally{        
+        arrow.style.display = "block";
     }
 }
 // render рандомных рецептов
