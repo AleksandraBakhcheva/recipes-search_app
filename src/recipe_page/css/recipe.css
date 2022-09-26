@@ -33,13 +33,6 @@ body {
 .recipe__info {
     margin: 30px 0px 30px 15px;
 }
-.recipe__links {
-   /* display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;*/
-   
-}
 
 .recipe__instructions,.recipe__ingredients {
     padding: 20px;
@@ -155,23 +148,31 @@ input[type=checkbox]:checked + label:before {
     display: none;
 }
 
-.recipe__register {
+.recipe__message {
+    display: none;
     background-color: #e6c7c7;
     border: 1px solid #999;
     border-radius: 20px;
     padding: 1px;
-    box-shadow: 1px 1px 5px #8e2222;
-    width: 100%;
+    box-shadow: 1px 1px 3px #8e2222;
+    width: 260px;
     text-align: center;
+    position: absolute;
+    left: 5px;
+    top: 45px;
+    
+}
+.recipe__message p {
+    margin: 5px;
 }
 
+.recipe__marker-container {
+    position: relative;
+}
 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+.bigscreen {
+    display: block;
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (max-width: 992px) {
@@ -182,17 +183,20 @@ input[type=checkbox]:checked + label:before {
         display: block;
         
     }
-    .bigscreen {
+     .bigscreen {
         display: none;
-    }
+    } 
     .recipe__food-img {
-        width: 35vw;
+        width: 100%;
         max-width:600px;
         min-width:250px;
         border-radius: 20px;
     }
     .recipe__media,.recipe__info {
         margin: 30px 15px 15px 0;
+    }
+    .recipe__media {
+        max-width: 50%;
     }
     .recipe__info {
         margin: 30px 0 30px 15px;
@@ -203,7 +207,7 @@ input[type=checkbox]:checked + label:before {
     }
 }
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 665px) {
     .recipe-big {
         display: block;
     }
@@ -225,4 +229,10 @@ input[type=checkbox]:checked + label:before {
     .recipe__marker-printer {
         display: none;
     }
+    .recipe__message {
+        right: 0px;
+        left: auto;
+    }
+    .recipe__media {
+        max-width: 100%;}
 }

@@ -6,5 +6,7 @@
 
 @import url(recipe.css);
 
+@import url(print.css);
+
 /* header style */
 @import url(../../header/css/header.css);
