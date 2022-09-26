@@ -7,3 +7,6 @@
 
 /* registration style */
 @import url(registration.css);
+
+/* footer style */
+@import url(../../footer/footer.css);
