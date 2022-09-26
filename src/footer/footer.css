@@ -8,7 +8,6 @@
 
 .footer__container {
     width: 90vw;
-    height: 10vh;
     margin: 0 auto;
     align-items: center;
     color: var(--main-font-color);
@@ -19,7 +18,7 @@
 }
 
 .logo__img_footer {
-    width: 10%;
+    width: 7%;
 }
 
 .copyright {
