@@ -2,7 +2,6 @@
 let email = localStorage.getItem("welcomeemail");
 let users = JSON.parse(localStorage.getItem('useremails') || '[]');
 let names = JSON.parse(localStorage.getItem('usernames') || '[]');
-let i = users.indexOf(email);
 let welcomeMsg = document.createElement("div");
 document.querySelector("h1").append(welcomeMsg);
 welcomeMsg.textContent = `Welcome, ${names[i]}`;
@@ -20,6 +19,7 @@ if (arrFavorites) { // если в сторадже что-то есть
     }]
 }
 console.log(arrFavorites);
+
 let dataArr = [];
 
 async function getRecipes() {
