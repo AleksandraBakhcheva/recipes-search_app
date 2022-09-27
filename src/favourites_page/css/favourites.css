@@ -2,10 +2,16 @@ body {
     overflow-x: hidden;
     font-family: var(--main-font-family);
     background-color: var(--main-background-color);
+    color: var(--items-font-color);
 }
 
 img {
     max-width: 100%;
+}
+
+.favourites-container {
+    margin: 0 auto;
+    width: 90%;
 }
 
 .fav_title,
@@ -17,28 +23,27 @@ img {
 
 .result__container {
     max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 3rem;
-    grid-gap: 25px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding-bottom: 15px;
+    
 }
 
 .result__item {
-    max-width: 450px;
+    margin: 0 auto;
+    max-width: 500px;
     align-content: center;
-    padding: 15px;
     overflow: hidden;
 }
 
 .result__item img {
-    width: 450px;
     margin: 0 auto;
 }
 
 .item__details {
     display: grid;
-    grid-template-columns: 1.5fr 0.5fr 1fr;
+    grid-template-columns: 1.5fr 0.5fr;
     justify-content: space-between;
     align-items: center;
 }
