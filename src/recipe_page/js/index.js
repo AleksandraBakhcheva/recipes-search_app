@@ -97,8 +97,8 @@ function checkFavorites() {
 
     let index = arrFavorites.findIndex((el) => el.email === email);
     if (index > -1) {
-        let arrive = arrFavorites[index].favRecipes.slice();
-        if (arrive.find((el) => el == id)) { //если элемент есть в локал сторадж
+        let array = arrFavorites[index].favRecipes.slice();
+        if (array.find((el) => el == id)) { //если элемент есть в локал сторадж
             bookmark.className += ' active';
             bookmark.src = imgMarkerFilled;
         }
