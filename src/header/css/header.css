@@ -68,10 +68,10 @@
 }
 @media screen and (max-width: 480px), screen and (min-width: 481px) and (max-width: 1023px), screen and (min-width: 1024px) and (max-width: 1200px) {
     .header__container {
-        height: 30vh;
+        height: 40%;
     }
     .logo__img {
-        margin-top: 70%;
+        margin-top: 100%;
         width: 100%;
     }
     .menu__list {
@@ -87,7 +87,8 @@
         justify-content: space-around;
         height: 2vh;
         width: 90vw;
-        margin-top: 10%;
+        margin-top: 18%;
+        margin-bottom: 5%;
         padding: 0;
         border: none
     }
@@ -113,10 +114,6 @@
     }
 }
 @media screen and (min-width: 481px) and (max-width: 1023px) {
-    .logo__img {
-        margin-top: 30%;
-        width: 90%;
-    }
     .button_color {
         font-size: 1.2rem;
     }
