@@ -1,10 +1,6 @@
 import imgMarkerFilled from "../img/heart_red.png";
 import imgMarkerNonFilled from "../img/heart.png";
 
-//const id = 52959; //для проверки
-//const id = 52771;
-//const id = 53043;
-
 let params = (new URL(document.location)).searchParams;
 const id = Number(params.get("id"));
 
@@ -32,24 +28,9 @@ async function loadData() {
 
     render(data);
 
-    // let massiv = [{
-    //         email: 'Inga_petrova91@mail.ru',
-    //         favRecipes: [2959, 52771, 53043]
-    //     },
-    //     {
-    //         email: 'chuka@mail.ru',
-    //         favRecipes: [2959, 53043]
-    //     },
-    //     {
-    //         email: 'sasha@mail.ru',
-    //         favRecipes: []
-    //     },
-    // ]
-    // localStorage.setItem('favorites', JSON.stringify(massiv));
-
     const bookmarkBtn = document.querySelector(".recipe__marker-btn");
     const message = document.querySelector(".recipe__message");
-    if (email) {
+    if (email && email != "") {
 
         arrFavorites = checkFavorites();
         bookmarkBtn.addEventListener("click", function () {
@@ -64,7 +45,6 @@ async function loadData() {
         });
     }
 }
-
 
 function addToFavorites(data) { //при нажатии на кнопку
     let index = arrFavorites.findIndex((el) => el.email === email);
@@ -143,6 +123,7 @@ function render(data) {
             const ingredientLabel = document.createElement('label');
             ingredient.setAttribute("type", "checkbox");
             ingredient.value = data.meals[0][`strIngredient${i}`];
+            ingredient.checked = true;
             ingredient.setAttribute("id", ingredient.value);
             const t = document.createTextNode(data.meals[0][`strMeasure${i}`] + " " + data.meals[0][`strIngredient${i}`]);
             ingredientLabel.setAttribute("for", ingredient.value);
@@ -154,10 +135,6 @@ function render(data) {
     }
 }
 
-try {
+document.addEventListener("DOMContentLoaded", function () {
     loadData();
-} catch (e) {
-    console.log("error");
-} finally {
-    console.log('We do cleanup here');
-}
+});

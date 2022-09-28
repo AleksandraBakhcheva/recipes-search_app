@@ -1,7 +1,6 @@
 import imgMarkerFilled from "../../recipe_page/img/heart_red.png";
 import imgMarkerNonFilled from "../../recipe_page/img/heart.png";
 
-
 let email = localStorage.getItem("welcomeemail");
 let users = JSON.parse(localStorage.getItem('useremails') || '[]');
 let names = JSON.parse(localStorage.getItem('usernames') || '[]');
@@ -9,54 +8,68 @@ let i = users.indexOf(email);
 
 let welcomeMsg = document.querySelector("h1");
 let result = document.querySelector('.result__container');
-let res = document.querySelector('.result');
 
 let arrFavorites = localStorage.getItem('favorites');
 
-if (email) {
-    welcomeMsg.textContent = `Welcome, ${names[i]}`;
-    welcomeMsg.classList.add('welcome-msg');
-    if (arrFavorites) { // если в сторадже что-то есть
-        arrFavorites = JSON.parse(arrFavorites);
-    } else {
-        document.querySelector("h2").textContent = "No favourites";
-        arrFavorites = [{
-            email: email,
-            favRecipes: []
-        }]
-    }
-} else {
-    document.querySelector("h2").textContent = "You need to register. No email";
-};
-
-
-
 let array = [];
-
-let index = arrFavorites.findIndex((el) => el.email === email);
-if (index > -1) {
-    array = arrFavorites[index].favRecipes.slice();
-}
-// } else {
-//     document.querySelector("h2").textContent = "You need to register";
-// }
-
-let div = document.createElement("div");
-for (let arr of array) {
-    div.textContent += `${arr}, `;
-}
-
-res.append(div);
-
 let dataArr = [];
+
+function checkRegistration() {
+    if (email && email != "") {
+        welcomeMsg.textContent = `Welcome, ${names[i]}`;
+        welcomeMsg.classList.add('welcome-msg');
+        if (arrFavorites) { // если в сторадже что-то есть
+            arrFavorites = JSON.parse(arrFavorites);
+        } else {
+            arrFavorites = [{
+                email: email,
+                favRecipes: []
+            }]
+            document.querySelector("h2").textContent = "No favourites";
+        }
+    } else {
+        document.querySelector("h2").textContent = "You need to register or sign in";
+    };
+
+    let index = arrFavorites.findIndex((el) => el.email === email);
+    if (index > -1) {
+        array = arrFavorites[index].favRecipes.slice();
+    }
+}
+
+function renderFav(dataArr) {
+    let generatedFav = '';
+    result.innerHTML = '';
+    for (let id = 0; id < dataArr.length; id++) {
+        generatedFav += `
+                <div class="result__item">
+                    <img src="${dataArr[id].strMealThumb}" alt="${dataArr[id].strMeal}">
+                    <div class="item__details">
+                        <div class="details">
+                            <h2 class="item-name">${dataArr[id].strMeal}</h2>
+                            <h3 class="item-area">${dataArr[id].strArea}</h3>
+                        </div>
+                        
+                        <div class="view-button">
+                            <a href='../recipe_page/recipe.html?id=${dataArr[id].idMeal}'>View recipe</a>
+                        </div>
+                    </div>            
+                </div>`
+    }
+    result.innerHTML = generatedFav;
+}
 
 async function getRecipes() {
     try {
-        for (let id of array) {
-            let url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
-            const response = await fetch(url);
-            const data = await response.json();
-            dataArr.push(data.meals[0]);
+        if (array.length == 0) {
+            document.querySelector("h2").textContent = "No favourites";
+        } else {
+            for (let id of array) {
+                let url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
+                const response = await fetch(url);
+                const data = await response.json();
+                dataArr.push(data.meals[0]);
+            }
         }
     } catch (error) {
         console.error('Error:', error);
@@ -65,28 +78,10 @@ async function getRecipes() {
     }
 }
 
-function renderFav(dataArr) {
-    let generatedFav = '';
-    result.innerHTML = '';
-    console.log(dataArr);
-    for (let d = 0; d < dataArr.length; d++) {
-        generatedFav += `
-                <div class="result__item">
-                    <img src="${dataArr[d].strMealThumb}" alt="${dataArr[d].strMeal}">
-                    <div class="item__details">
-                        <div class="details">
-                            <h2 class="item-name">${dataArr[d].strMeal}</h2>
-                            <h3 class="item-area">${dataArr[d].strArea}</h3>
-                        </div>
-                        
-                        <div class="view-button">
-                            <a href='../recipe_page/recipe.html?id=${dataArr[d].idMeal}'>View recipe</a>
-                        </div>
-                    </div>            
-                </div>`
-    }
-    result.innerHTML = generatedFav;
-}
+document.addEventListener("DOMContentLoaded", function () {
+    checkRegistration();
+    getRecipes(dataArr);
+});
 
 /* <div class = "recipe__marker" >
     <
@@ -99,9 +94,7 @@ data - id = $ {
     /div> */
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    getRecipes(dataArr);
-});
+
 
 
 // document.addEventListener('click', function (e) {

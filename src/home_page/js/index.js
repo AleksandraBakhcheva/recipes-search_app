@@ -87,7 +87,7 @@ function generateHtml(results) {
                     <h3 class="item-area">${result.strArea}</h3>
                 </div>
                 <div class="view-button">
-                    <a href='recipe_page/index.html?id=${result.idMeal}'>View recipe</a>
+                    <a href='recipe_page/recipe.html?id=${result.idMeal}'>View recipe</a>
                 </div>
             </div>            
         </div>`

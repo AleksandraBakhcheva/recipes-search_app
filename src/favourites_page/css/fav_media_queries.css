@@ -8,7 +8,6 @@
         display: grid;
         grid-gap: 30px;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    
         padding-bottom: 30px;
         
     }
@@ -18,8 +17,12 @@
     .result__container {
         max-width: 100%;
         display: grid;
-        grid-gap: 30px;
+        grid-gap: 15px;
         grid-template-columns: 1fr;
+    }
+
+    .result__item {
+        margin: 0 auto;
     }
 }
 
