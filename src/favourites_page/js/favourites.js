@@ -43,7 +43,7 @@ function renderFav(dataArr) {
     for (let id = 0; id < dataArr.length; id++) {
         generatedFav += `
                 <div class="result__item">
-                    <img src="${dataArr[id].strMealThumb}" alt="${dataArr[id].strMeal}">
+                <a href='../recipe_page/recipe.html?id=${dataArr[id].idMeal}'><img src="${dataArr[id].strMealThumb}" alt="${dataArr[id].strMeal}"></a>
                     <div class="item__details">
                         <div class="details">
                             <h2 class="item-name">${dataArr[id].strMeal}</h2>
