@@ -11,9 +11,18 @@ let foodCategory = document.querySelector(".recipe__category");
 let foodTags = document.querySelector(".recipe__tags");
 let ingredients = document.querySelector(".recipe__ingredients");
 const bookmark = document.querySelector(".recipe__marker-btn-img");
+const shopListBtn = document.querySelector(".recipe__ingredients-btn");
 
 let email = localStorage.getItem("welcomeemail");
 let arrFavorites = localStorage.getItem('favorites');
+
+let modal = document.getElementById('myModal');
+let span = document.getElementsByClassName("close")[0];
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 async function loadData() {
 
@@ -44,6 +53,9 @@ async function loadData() {
             message.style.display = "none";
         });
     }
+    shopListBtn.addEventListener("click", function () {
+        addToShopList(data);
+    });
 }
 
 function addToFavorites(data) { //при нажатии на кнопку
@@ -122,7 +134,7 @@ function render(data) {
             const ingredient = document.createElement('input');
             const ingredientLabel = document.createElement('label');
             ingredient.setAttribute("type", "checkbox");
-            ingredient.value = data.meals[0][`strIngredient${i}`];
+            ingredient.value = data.meals[0][`strIngredient${i}`] + `${i}`;
             ingredient.checked = true;
             ingredient.setAttribute("id", ingredient.value);
             const t = document.createTextNode(data.meals[0][`strMeasure${i}`] + " " + data.meals[0][`strIngredient${i}`]);
@@ -132,6 +144,24 @@ function render(data) {
             ingredientSpace.append(ingredient);
             ingredientSpace.append(ingredientLabel);
         }
+    }
+}
+
+function addToShopList(data) {
+    modal.style.display = "block";
+    const shopList = document.querySelector(".shoplist");
+    while (shopList.firstChild) {
+        shopList.removeChild(shopList.firstChild);
+    }
+    let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    for (let checkbox of checkboxes) {
+        let p = document.createElement("p");
+        p.textContent = checkbox.parentNode.innerText;
+        shopList.append(p);
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
     }
 }
 
