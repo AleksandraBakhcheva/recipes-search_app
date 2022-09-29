@@ -8,10 +8,12 @@
     <title>Favourites</title>
     <link rel="shortcut icon" href="../home_page/img/cooking-pot.png">
     <link rel="stylesheet" href="css/index.css">
+    <script type="module" src="../header/js/header.js"></script>
+    <script type="module" src="js/favourites.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="header__container_color">
             <div class="header__container">
                 <div class="logo">
@@ -26,25 +28,33 @@
                         <li class="menu__item"><a href="../registration_page/registration.html"
                                 class="menu__link">Register</a>
                         </li>
-                        <li class="menu__item"><a href="favourites.html" class="menu__link">My
+                        <li class="menu__item"><a href="../favourites_page/favourites.html" class="menu__link">My
                                 Favorites</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <main>
+    <main class="favourites-container">
         <h1></h1>
-        <h1 class="fav_title">Your favourites</h1>
-        <section id="result__section">
+        <h2 class="fav_title">Your favourites</h2>
+        <section class="result__section">
             <div class="result__container"></div>
-
         </section>
 
     </main>
+    <footer>
+        <div class="footer__container_color">
+            <div class="footer__container">
+                <div class="logo_footer">
+                    <a href="#header">
+                        <img class="logo__img_footer" src="../header/images/logo.svg" alt="logo"></a>
+                </div>
+                <p class="copyright">&copy; Copyright 2022</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
-<script src="../header/js/header.js"></script>
-<script src="js/favourites.js"></script>
 
 </html>

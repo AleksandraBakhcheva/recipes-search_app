@@ -5,6 +5,9 @@
 /* header style */
 @import url(../../header/css/header.css);
 
+/* footer style */
+@import url(../../footer/footer.css);
+
 /* favourites style */
 @import url(favourites.css);
 @import url(fav_media_queries.css);

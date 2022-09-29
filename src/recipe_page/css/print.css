@@ -1,9 +1,9 @@
-/* @media print {
+@media print {
     
   body {
-    margin: 10px;
+    margin: 5px;
     color: #000;
-    background-color: rgb(156, 113, 113);
+    
   }
   .header__container_color{
     display: none;
@@ -41,4 +41,4 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-} */
+} 

@@ -1,12 +1,8 @@
 import imgMarkerFilled from "../img/heart_red.png";
 import imgMarkerNonFilled from "../img/heart.png";
 
-const id = 52959; //для проверки
-//const id = 52771;
-//const id = 53043;
-
-// let params = (new URL(document.location)).searchParams;
-// const id = Number(params.get("id"));
+let params = (new URL(document.location)).searchParams;
+const id = Number(params.get("id"));
 
 let foodImg = document.querySelector(".recipe__food-img");
 let foodName = document.querySelector(".recipe__name");
@@ -15,10 +11,18 @@ let foodCategory = document.querySelector(".recipe__category");
 let foodTags = document.querySelector(".recipe__tags");
 let ingredients = document.querySelector(".recipe__ingredients");
 const bookmark = document.querySelector(".recipe__marker-btn-img");
+const shopListBtn = document.querySelector(".recipe__ingredients-btn");
 
 let email = localStorage.getItem("welcomeemail");
-//let email = "sasha@mail.ru"; //для проверки
 let arrFavorites = localStorage.getItem('favorites');
+
+let modal = document.getElementById('myModal');
+let span = document.getElementsByClassName("close")[0];
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 async function loadData() {
 
@@ -33,24 +37,9 @@ async function loadData() {
 
     render(data);
 
-    // let massiv = [{
-    //         email: 'Inga_petrova91@mail.ru',
-    //         favRecipes: [2959, 52771, 53043]
-    //     },
-    //     {
-    //         email: 'chuka@mail.ru',
-    //         favRecipes: [2959, 53043]
-    //     },
-    //     {
-    //         email: 'sasha@mail.ru',
-    //         favRecipes: []
-    //     },
-    // ]
-    // localStorage.setItem('favorites', JSON.stringify(massiv));
-
     const bookmarkBtn = document.querySelector(".recipe__marker-btn");
     const message = document.querySelector(".recipe__message");
-    if (email) {
+    if (email && email != "") {
 
         arrFavorites = checkFavorites();
         bookmarkBtn.addEventListener("click", function () {
@@ -64,8 +53,10 @@ async function loadData() {
             message.style.display = "none";
         });
     }
+    shopListBtn.addEventListener("click", function () {
+        addToShopList(data);
+    });
 }
-
 
 function addToFavorites(data) { //при нажатии на кнопку
     let index = arrFavorites.findIndex((el) => el.email === email);
@@ -73,11 +64,11 @@ function addToFavorites(data) { //при нажатии на кнопку
         {
             if (!bookmark.classList.contains('active')) { //если нет класса active
                 bookmark.className += ' active'; //то добавляем ему этот класс
-                bookmark.src = imgMarkerFilled; // картинка пустая
+                bookmark.src = imgMarkerFilled;
                 arrFavorites[index].favRecipes.push(id);
             } else {
                 bookmark.className = 'recipe__marker-btn'; //то класс без active
-                bookmark.src = imgMarkerNonFilled; // картинка заполненная
+                bookmark.src = imgMarkerNonFilled;
                 arrFavorites[index].favRecipes = arrFavorites[index].favRecipes.filter((el) => el !== id); //удаляем из массива
             }
         }
@@ -98,8 +89,8 @@ function checkFavorites() {
 
     let index = arrFavorites.findIndex((el) => el.email === email);
     if (index > -1) {
-        let arrive = arrFavorites[index].favRecipes.slice();
-        if (arrive.find((el) => el == id)) { //если элемент есть в локал сторадж
+        let array = arrFavorites[index].favRecipes.slice();
+        if (array.find((el) => el == id)) { //если элемент есть в локал сторадж
             bookmark.className += ' active';
             bookmark.src = imgMarkerFilled;
         }
@@ -143,7 +134,8 @@ function render(data) {
             const ingredient = document.createElement('input');
             const ingredientLabel = document.createElement('label');
             ingredient.setAttribute("type", "checkbox");
-            ingredient.value = data.meals[0][`strIngredient${i}`];
+            ingredient.value = data.meals[0][`strIngredient${i}`] + `${i}`;
+            ingredient.checked = true;
             ingredient.setAttribute("id", ingredient.value);
             const t = document.createTextNode(data.meals[0][`strMeasure${i}`] + " " + data.meals[0][`strIngredient${i}`]);
             ingredientLabel.setAttribute("for", ingredient.value);
@@ -155,10 +147,24 @@ function render(data) {
     }
 }
 
-try {
-    loadData();
-} catch (e) {
-    console.log("error");
-} finally {
-    console.log('We do cleanup here');
+function addToShopList(data) {
+    modal.style.display = "block";
+    const shopList = document.querySelector(".shoplist");
+    while (shopList.firstChild) {
+        shopList.removeChild(shopList.firstChild);
+    }
+    let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    for (let checkbox of checkboxes) {
+        let p = document.createElement("p");
+        p.textContent = checkbox.parentNode.innerText;
+        shopList.append(p);
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadData();
+});
