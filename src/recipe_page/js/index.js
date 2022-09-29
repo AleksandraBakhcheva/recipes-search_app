@@ -126,7 +126,7 @@ function render(data) {
     //rendering ingredients
 
     for (let i = 1; i < 20; i++) {
-        if (data.meals[0][`strIngredient${i}`] == "") {
+        if (data.meals[0][`strIngredient${i}`] == "" || data.meals[0][`strIngredient${i}`] == null) {
             break;
         } else {
             const ingredientSpace = document.createElement('div');
