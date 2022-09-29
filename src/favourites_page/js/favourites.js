@@ -50,9 +50,7 @@ function renderFav(dataArr) {
                             <h3 class="item-area">${dataArr[id].strArea}</h3>
                         </div>
                         
-                        <div class="view-button">
-                            <a href='../recipe_page/recipe.html?id=${dataArr[id].idMeal}'>View recipe</a>
-                        </div>
+                        <button class="view-button" onclick="window.location.href = '../recipe_page/recipe.html?id=${dataArr[id].idMeal}'">View recipe</button>
                     </div>            
                 </div>`
     }

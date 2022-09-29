@@ -52,7 +52,7 @@ img {
 
 .custom-input {
     position: relative;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .custom-input::before {
@@ -73,7 +73,7 @@ img {
     background-color: #ffff;
     font-size: 1.875rem;
     padding: 1rem 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 4px 4px var(--box-shadow-input-color), 0px 4px 4pxvar(--box-shadow-input-color), 0px 4px 4px var(--box-shadow-input-color);
     border: none;
     outline: none;
@@ -87,7 +87,7 @@ img {
     font-size: 2.5rem;
     padding: 0.65rem 0.65rem;
     margin: 0 auto;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 4px 4px var(--box-shadow-input-color), 0px 4px 4pxvar(--box-shadow-input-color), 0px 4px 4px var(--box-shadow-input-color);
     border: none;
     vertical-align: middle;
@@ -130,6 +130,7 @@ img {
     justify-content: space-around;
     gap: 3rem;
     grid-gap: 25px;
+    padding: 50px 0;
 }
 
 .result__item {
@@ -142,6 +143,7 @@ img {
 
 .result__item img {
     width: 450px;
+    border-radius: 20px;
 }
 
 .item__details {
@@ -164,19 +166,16 @@ img {
     padding: 10px 0;
     background: var(--main-font-color);
     box-shadow: 0px 4px 4px var(--box-shadow-input-color);
-    border-radius: 5px;
+    border-radius: 10px;
+    border: none;
     justify-self: end;
+    color: var(--button-font-color);
+    justify-content: center;
+    cursor: pointer;
 }
 
 .view-button:hover {
     box-shadow: 0px 2px 2px var(--box-shadow-input-color);
     transform: scale(0.99);
     transition: 0.5s;
-}
-
-.view-button a {
-    text-decoration: none;
-    margin: 0 auto;
-    color: var(--button-font-color);
-    font-size: 1.25rem;
 }

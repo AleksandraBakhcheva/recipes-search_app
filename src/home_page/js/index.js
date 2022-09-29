@@ -18,17 +18,17 @@ async function getRandom() {
         let i = 0;
         while (i < 15) {
             let response = await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
-            console.log(response)
+          //  console.log(response)
             let data = await response.json();
-            console.log(data.meals[0]);
+        //    console.log(data.meals[0]);
             randomArr.push(data.meals[0]);
             i++;
         }
-        console.log(randomArr);
+     //   console.log(randomArr);
         renderRandom(randomArr);
 
     } catch (error) {
-        console.log(error.message); //?
+        console.log(error.message);
     }
 }
 // render рандомных рецептов
@@ -44,9 +44,7 @@ function renderRandom(randomArr) {
                     <h2 class="item-name">${randomArr[r].strMeal}</h2>
                     <h3 class="item-area">${randomArr[r].strArea}</h3>
                 </div>
-                <div class="view-button">
-                    <a href='recipe_page/recipe.html?id=${randomArr[r].idMeal}'>View recipe</a>
-                </div>
+                <button class="view-button" onclick="window.location.href ='recipe_page/recipe.html?id=${randomArr[r].idMeal}'">View recipe</button>
             </div>            
         </div>`
     result.innerHTML = generatedHTML;
@@ -86,9 +84,7 @@ function generateHtml(results) {
                     <h2 class="item-name">${result.strMeal}</h2>
                     <h3 class="item-area">${result.strArea}</h3>
                 </div>
-                <div class="view-button">
-                    <a href='recipe_page/recipe.html?id=${result.idMeal}'>View recipe</a>
-                </div>
+                <button class="view-button" onclick="window.location.href ='recipe_page/recipe.html?id=${result.idMeal}'">View recipe</button>
             </div>            
         </div>`
     })

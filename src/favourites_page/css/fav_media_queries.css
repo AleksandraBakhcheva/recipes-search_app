@@ -9,7 +9,7 @@
         grid-gap: 30px;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         padding-bottom: 30px;
-        
+
     }
 }
 
@@ -32,14 +32,15 @@
         max-width: 100%;
         display: grid;
         grid-gap: 15px;
-        
+
         padding-bottom: 15px;
-        
+
     }
 
     .view-button {
         width: 100px;
         padding: 10px 0;
+        font-size: 1rem;
     }
 
     .recipe__marker {
@@ -48,10 +49,6 @@
 
     .recipe__marker-btn {
         width: 40px;
-    }
-
-    .view-button a {
-        font-size: 1rem;
     }
 
     .details {
