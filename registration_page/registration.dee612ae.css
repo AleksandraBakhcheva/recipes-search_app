@@ -1,0 +1,380 @@
+@import "https://necolas.github.io/normalize.css/latest/normalize.css";
+@import "https://fonts.googleapis.com/css2?family=Jua&family=Junge&display=swap";
+:root {
+  --main-font-color: #d12944;
+  --additional-font-color: #fff;
+  --items-font-color: #000c;
+  --main-background-color: #ddc9a780;
+  --button-font-color: #ffffffe6;
+  --box-shadow-input-color: #00000040;
+  --border-input-color: #0006;
+  --correct-font-color: #008000df;
+  --main-font-family: "Jua", sans-serif;
+  --add-font-family: "Junge", serif;
+}
+
+body {
+  color: var(--main-font-color);
+  font-style: normal;
+  font-weight: 400;
+  font-family: var(--main-font-family);
+}
+
+.header__container_color {
+  background-color: var(--additional-font-color);
+}
+
+.header__container {
+  width: 90vw;
+  height: 20vh;
+  color: var(--main-font-color);
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+}
+
+.logo__img {
+  width: 70%;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+}
+
+.menu__list {
+  width: 70vw;
+  justify-content: space-around;
+  padding: 0;
+  list-style-type: none;
+  display: inline-flex;
+}
+
+.menu__link {
+  color: var(--main-font-color);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.menu__item {
+  align-items: center;
+  display: inline-flex;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.menu__link_button {
+  background: var(--additional-font-color);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.login__input {
+  border: .5px solid var(--box-shadow-input-color);
+  box-shadow: 0px 1px 1px var(--box-shadow-input-color);
+  color: var(--border-input-color);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.login__input:first-child {
+  margin-bottom: 2%;
+  margin-right: .2%;
+}
+
+.button_color {
+  color: var(--border-input-color);
+}
+
+.form label {
+  display: inline-flex;
+}
+
+.login__form {
+  width: 36vw;
+  height: 15vh;
+  border-radius: 5px;
+  align-items: center;
+  display: flex;
+}
+
+@media screen and (max-width: 480px), screen and (min-width: 481px) and (max-width: 1023px), screen and (min-width: 1024px) and (max-width: 1200px) {
+  .header__container {
+    height: 40%;
+  }
+
+  .logo__img {
+    width: 100%;
+    margin-top: 100%;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+  }
+
+  .menu__link {
+    font-size: 1rem;
+  }
+
+  .login__form {
+    height: 2vh;
+    width: 90vw;
+    border: none;
+    justify-content: space-around;
+    margin-top: 18%;
+    margin-bottom: 5%;
+    padding: 0;
+    display: inline-flex;
+  }
+
+  .form {
+    margin-top: -18%;
+    margin-right: 3%;
+  }
+
+  .login__input {
+    width: 44vw;
+    height: 3vh;
+    padding: 0;
+    font-size: .7rem;
+  }
+
+  .login__input:first-child {
+    margin: 0;
+  }
+
+  .button_color {
+    font-size: .7rem;
+  }
+
+  .wrong_login_email_message {
+    margin-top: -14%;
+    font-size: .7rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .button_color {
+    font-size: 1.2rem;
+  }
+
+  .form {
+    margin-top: -14%;
+  }
+
+  .login__input {
+    font-size: 1.2rem;
+  }
+
+  .menu__link {
+    font-size: 1.8rem;
+  }
+
+  .wrong_login_email_message {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .logo__img {
+    width: 90%;
+    margin-top: 55%;
+  }
+
+  .button_color {
+    font-size: 1.5rem;
+  }
+
+  .form {
+    margin-top: -12%;
+  }
+
+  .login__input {
+    font-size: 1.5rem;
+  }
+
+  .menu__link {
+    font-size: 2rem;
+  }
+
+  .wrong_login_email_message {
+    font-size: 1.5rem;
+  }
+}
+
+body {
+  color: var(--items-font-color);
+  background-image: url("../registration-form-background.6dff3bdd.jpeg");
+  background-size: cover;
+}
+
+h1, div h2 {
+  text-align: center;
+  color: var(--additional-font-color);
+}
+
+h3 {
+  color: var(--items-font-color);
+}
+
+.container {
+  max-width: 60%;
+  margin: 3% auto;
+}
+
+form {
+  background-color: var(--additional-font-color);
+  border-radius: 5px;
+  margin: 2% 0;
+}
+
+.form__header {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.divider:empty {
+  height: 25px;
+  background-image: linear-gradient(to right, #0000001a, #000000b3);
+}
+
+.input1, .input2, .input3, .input4, .input5, .question, .answer {
+  box-shadow: 0px 1px 1px var(--box-shadow-input-color);
+  border: .5px solid var(--box-shadow-input-color);
+  border-radius: 5px;
+  margin-top: 1%;
+  display: block;
+}
+
+.surname, .name, .email, .password1, .password2, .security-question, .security-answer {
+  margin-top: 3%;
+}
+
+.input__box {
+  grid-template-columns: 65% 35%;
+  display: grid;
+}
+
+.input__box p {
+  margin-top: 14%;
+  margin-left: -55%;
+  font-size: .8rem;
+}
+
+.message_color {
+  width: 47%;
+  color: var(--main-font-color);
+  margin-top: 1%;
+  font-size: .9rem;
+}
+
+.message_color_1 {
+  width: 47%;
+  color: var(--correct-font-color);
+  margin-top: 1%;
+  font-size: .9rem;
+}
+
+.inputs {
+  padding: 5% 0 5% 4%;
+}
+
+.inputs input {
+  min-width: 65%;
+  padding: 3% 0 3% 2%;
+  font-size: 1rem;
+}
+
+.form__footer {
+  margin-top: 5%;
+}
+
+.register__button {
+  cursor: pointer;
+  color: var(--main-font-color);
+  border: none;
+  border-radius: 5px;
+  padding: 2% 6%;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("../mobile-background.f29fe7a9.png");
+    background-size: contain;
+  }
+
+  .form__header {
+    height: 43vh;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 36% auto;
+  }
+
+  div h2 {
+    font-size: 2rem;
+  }
+
+  .input__box {
+    grid-template-columns: 100%;
+  }
+
+  .input__box p {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .inputs input {
+    min-width: 90%;
+  }
+}
+
+.footer__container_color {
+  background-color: var(--additional-font-color);
+}
+
+.footer__container {
+  width: 90vw;
+  height: 15vh;
+  color: var(--main-font-color);
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo_footer {
+  text-align: center;
+}
+
+.logo__img_footer {
+  width: 7%;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .footer__container {
+    height: 10vh;
+  }
+
+  .copyright {
+    font-size: .7rem;
+  }
+}
+
+
+
+/*# sourceMappingURL=registration.dee612ae.css.map */
