@@ -10,4 +10,4 @@
 ### Thanks to all Contributors
 [![Contributors](https://contrib.rocks/image?repo=AleksandraBakhcheva/recipes-search_app)](https://github.com/AleksandraBakhcheva/recipes-search_app/graphs/contributors)
 
-### <a href="https://aleksandrabakhcheva.github.io/recipes-search_app/">Click Demo</a>
+### <a href="https://aleksandrabakhcheva.github.io/recipes-search_app/" target="_blank">Click Demo</a>
