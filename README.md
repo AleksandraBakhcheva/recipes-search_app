@@ -1,6 +1,6 @@
 # Recipes Search App 
 
-Application for recipes search  
+Application for recipes search 🍽 
 
 ## Description
 
