@@ -1,4 +1,4 @@
-# Recipes Search App 
+# Mastering the Art of Cooking
 
 Application for recipes search 🍽 
 
