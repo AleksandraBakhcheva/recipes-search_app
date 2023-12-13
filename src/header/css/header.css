@@ -1,5 +1,5 @@
-@import url(../../general_css/variables.css);
-@import url(../../general_css/general.css);
+@import url(../../assets/general/general.css);
+@import url(../../assets/general/variables.css);
 
 .header__container_color {
   background-color: var(--additional-font-color);
@@ -27,8 +27,8 @@
 .menu__list {
   display: inline-flex;
   width: 70vw;
-  justify-content: space-around;
   padding: 0;
+  justify-content: space-around;
   list-style-type: none;
 }
 
@@ -49,9 +49,9 @@
 
 .menu__link_button {
   padding: 0;
-  background: var(--additional-font-color);
   border: none;
   cursor: pointer;
+  background: var(--additional-font-color);
 }
 
 .login__input {
@@ -91,14 +91,14 @@
   }
 
   .logo__img {
-    margin-top: 100%;
     width: 100%;
+    margin-top: 100%;
   }
 
   .menu__list {
+    margin: 0;
     flex-direction: column;
     align-items: flex-end;
-    margin: 0;
   }
 
   .menu__link {
@@ -107,12 +107,12 @@
 
   .login__form {
     display: inline-flex;
-    justify-content: space-around;
     height: 2vh;
     width: 90vw;
     margin-top: 18%;
     margin-bottom: 5%;
     padding: 0;
+    justify-content: space-around;
     border: none;
   }
 
@@ -137,8 +137,8 @@
   }
 
   .wrong_login_email_message {
-    font-size: 0.7rem;
     margin-top: -14%;
+    font-size: 0.7rem;
   }
 }
 
@@ -166,8 +166,8 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
   .logo__img {
-    margin-top: 55%;
     width: 90%;
+    margin-top: 55%;
   }
 
   .button_color {

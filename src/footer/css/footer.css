@@ -1,6 +1,5 @@
-/* variables and general styles */
-@import url(../general_css/variables.css);
-@import url(../general_css/general.css);
+@import url(../../assets/general/general.css);
+@import url(../../assets/general/variables.css);
 
 .footer__container_color {
   background-color: var(--additional-font-color);
@@ -23,8 +22,8 @@
 }
 
 .copyright {
-  text-align: center;
   margin-top: 0;
+  text-align: center;
   font-size: 1rem;
 }
 
