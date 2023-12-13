@@ -6,7 +6,7 @@
 @import url(../../header/css/header.css);
 
 /* home page */
-@import url(home_page.css);
+@import url(home.css);
 
 /* home_page media queries */
 @import url(home_media_queries.css);
