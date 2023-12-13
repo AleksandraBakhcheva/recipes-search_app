@@ -1,0 +1,176 @@
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main__section {
+  height: 85vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: url(../../assets/images/strawberries.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slogan {
+  margin-top: 6rem;
+  font-family: var(--add-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 85px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+  color: var(--additional-font-color);
+}
+
+.result__section {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.search__container {
+  display: flex;
+  width: 30%;
+  margin: 10rem auto 0 auto;
+  justify-content: center;
+}
+
+.search__form {
+  display: flex;
+  gap: 1rem;
+}
+
+.custom-input {
+  position: relative;
+  border-radius: 10px;
+}
+
+.custom-input::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  margin: auto 0;
+  background: url("../../assets/images/search.svg") no-repeat;
+  background-size: cover;
+}
+
+.search__input {
+  width: 25rem;
+  padding: 1rem 1rem;
+  font-size: 1.875rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+  box-shadow: 0px 4px 4px var(--box-shadow-input-color),
+    0px 4px 4pxvar (--box-shadow-input-color),
+    0px 4px 4px var(--box-shadow-input-color);
+  color: #504e4e;
+  background-color: #ffff;
+}
+
+.search__button {
+  margin: 0 auto;
+  padding: 0.65rem 0.65rem;
+  font-size: 2.5rem;
+  border-radius: 10px;
+  border: none;
+  vertical-align: middle;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px var(--box-shadow-input-color),
+    0px 4px 4pxvar (--box-shadow-input-color),
+    0px 4px 4px var(--box-shadow-input-color);
+  color: var(--button-font-color);
+  background: var(--main-font-color);
+}
+
+.search__button:hover {
+  transform: scale(0.99);
+  transition: 0.5s;
+}
+
+.error_message {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+  color: var(--additional-font-color);
+}
+
+.hidden_arrow {
+  display: none;
+  position: absolute;
+  left: 45%;
+  bottom: 5%;
+  width: 50px;
+}
+
+#result__section {
+  background-color: var(--main-background-color);
+}
+
+.result__container {
+  display: flex;
+  max-width: 100%;
+  padding: 50px 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  grid-gap: 25px;
+}
+
+.result__item {
+  max-width: 450px;
+  padding: 15px;
+  box-sizing: border-box;
+  align-content: center;
+  overflow: hidden;
+}
+
+.result__item img {
+  width: 450px;
+  border-radius: 20px;
+}
+
+.item__details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details {
+  display: block;
+  font-size: 1rem;
+  line-height: 25px;
+  color: var(--items-font-color);
+}
+
+.view-button {
+  display: flex;
+  width: 130px;
+  padding: 10px 0;
+  justify-content: center;
+  justify-self: end;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px var(--box-shadow-input-color);
+  color: var(--button-font-color);
+  background: var(--main-font-color);
+}
+
+.view-button:hover {
+  transform: scale(0.99);
+  transition: 0.5s;
+  box-shadow: 0px 2px 2px var(--box-shadow-input-color);
+}

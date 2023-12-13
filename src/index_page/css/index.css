@@ -1,0 +1,15 @@
+/* variables and general styles */
+@import url(../../assets/general/general.css);
+@import url(../../assets/general/variables.css);
+
+/* header style */
+@import url(../../header/css/header.css);
+
+/* home page */
+@import url(home_page.css);
+
+/* home_page media queries */
+@import url(home_media_queries.css);
+
+/* footer style */
+@import url(../../footer/css/footer.css);
