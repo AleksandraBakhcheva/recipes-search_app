@@ -1,6 +1,6 @@
 class MyHeader extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `<header>
+    this.innerHTML = `<header id="header">
     <div class="header__container_color">
       <div class="header__container">
         <div class="logo">
