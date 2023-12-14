@@ -1,5 +1,5 @@
-const imgMarkerNonFilled = "../../assets/images/heart.png";
-const imgMarkerFilled = "../../assets/images/heartr.png";
+const imgMarkerNonFilled = "assets/images/heart-blank.png";
+const imgMarkerFilled = "assets/images/heart-red.png";
 
 let params = new URL(document.location).searchParams;
 const id = Number(params.get("id"));

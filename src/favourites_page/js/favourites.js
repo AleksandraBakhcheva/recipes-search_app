@@ -1,5 +1,5 @@
-const imgMarkerNonFilled = "../../assets/images/heart.png";
-const imgMarkerFilled = "../../assets/images/heartr.png";
+const imgMarkerNonFilled = "assets/images/heart-blank.png";
+const imgMarkerFilled = "assets/images/heart-red.png";
 
 let email = localStorage.getItem("welcomeemail");
 let users = JSON.parse(localStorage.getItem("useremails") || "[]");
