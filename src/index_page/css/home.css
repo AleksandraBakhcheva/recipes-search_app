@@ -113,6 +113,8 @@ img {
   left: 45%;
   bottom: 5%;
   width: 50px;
+  border-radius: 100px;
+  background-color: lightgrey;
 }
 
 #result__section {
