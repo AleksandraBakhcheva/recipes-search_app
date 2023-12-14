@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe</title>
+  <link rel="shortcut icon" href="assets/images/cooking-pot.png">
+  <link rel="stylesheet" href="recipe_page/css/index.css">
+</head>
+
+<body>
+  <my-header></my-header>
+  <main class="recipe">
+    <div class="recipe__container">
+      <div class="recipe-big">
+        <div class="recipe__media">
+          <img class="recipe__food-img" alt="food" />
+          <div class="recipe__food">
+            <div class="recipe__name-info">
+              <h1 class="recipe__name"></h1>
+              <p class="recipe__category"></p>
+              <p class="recipe__area"></p>
+              <p class="recipe__tags"></p>
+            </div>
+            <div class="recipe__links">
+              <div class="recipe__marker-container">
+                <div class="recipe__marker">
+                  <button class="recipe__marker-btn">
+                    <img src="assets/images/heart.png" alt="bookmark-icon" class="recipe__marker-btn-img" />
+                  </button>
+                </div>
+                <div class="recipe__message">
+                  <p>Sign in to add it to your favourites</p>
+                </div>
+              </div>
+              <div class="recipe__marker recipe__marker-printer">
+                <button class="recipe__marker-btn" title="Print the page" onclick="window.print()">
+                  <img src="assets/images/printer.png" alt="printer-icon" class="recipe__marker-btn-img" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recipe__info">
+          <div class="recipe__ingredients">
+            <h2 class="recipe__info-titles">Ingredients</h2>
+            <div class="recipe__marker recipe__title-btn">
+              <button class="recipe__marker-btn recipe__ingredients-btn" title="Add to shopping list">
+                <img src="assets/images/shopping-list.png" alt="shopping-list-icon" class="recipe__icon" />
+              </button>
+            </div>
+          </div>
+          <div class="bigscreen recipe__instructions">
+            <h2 class="recipe__info-titles">Instruction</h2>
+            <div class="recipe__youtube recipe__title-btn" title="Open Recipe in YouTube">
+              <a class="recipe__youtube-link" target="_blank">
+                <img src="assets/images/youtube.png" alt="youtube-icon" class="recipe__youtube-img" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="smallscreen recipe__instructions">
+        <h2 class="recipe__info-titles">Instruction</h2>
+        <div class="recipe__youtube recipe__title-btn" title="Open Recipe in YouTube">
+          <a class="recipe__youtube-link" target="_blank">
+            <img src="assets/images/youtube.png" alt="youtube-icon" class="recipe__youtube-img">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Shopping List</h2>
+        </div>
+        <div class="modal-body shoplist">
+        </div>
+      </div>
+    </div>
+  </main>
+  <my-footer></my-footer>
+  <script type="module" src="header/js/header.js"></script>
+  <script src="recipe_page/js/index.js"></script>
+  <script type="module" src="footer/js/footer.js"></script>
+</body>
+
+</html>
