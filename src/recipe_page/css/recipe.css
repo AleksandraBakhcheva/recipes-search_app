@@ -2,7 +2,7 @@
   font-style: normal;
   font-size: 16px;
   color: var(--items-font-color);
-  background-color: rgba(218, 202, 174, 0.5);
+  background-color: var(--recipe-background-color);
 }
 
 .recipe__container {
@@ -19,6 +19,7 @@
 .recipe__info {
   margin: 30px 15px 15px 0;
 }
+
 .recipe__info {
   margin: 30px 0px 30px 15px;
 }
@@ -27,14 +28,15 @@
 .recipe__ingredients {
   padding: 20px;
   border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.33);
   border-radius: 20px;
-  background-color: #ffffff;
+  border: 1px solid var(--recipe-border-color);
+  background-color: var(--additional-font-color);
 }
 
 .recipe__ingredients {
   margin-bottom: 30px;
 }
+
 .recipe__instructions {
   line-height: 1.5em;
 }
@@ -130,14 +132,14 @@ input[type="checkbox"] + label:before {
   line-height: 22px;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #ccc;
+  border: 1px solid var(--checkbox-border-color);
   transition: color ease 0.3s;
   color: transparent;
 }
 
 input[type="checkbox"]:checked + label:before {
-  border-color: var(--print-color);
-  color: var(--print-color);
+  border-color: var(--main-other-color);
+  color: var(--main-other-color);
 }
 
 .smallscreen {
@@ -152,10 +154,10 @@ input[type="checkbox"]:checked + label:before {
   width: 260px;
   padding: 1px;
   text-align: center;
-  border: 1px solid #999;
+  border: var(--recipe-msg-border);
   border-radius: 20px;
-  box-shadow: 1px 1px 3px #8e2222;
-  background-color: #e6c7c7;
+  box-shadow: var(--recipe-msg-box-shadow);
+  background-color: var(--recipe-msg-background-color);
 }
 
 .recipe__message p {
@@ -180,8 +182,7 @@ input[type="checkbox"]:checked + label:before {
   padding-top: 100px;
   z-index: 1;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--input-border-color);
 }
 
 .modal-content {
@@ -189,13 +190,13 @@ input[type="checkbox"]:checked + label:before {
   width: 30%;
   margin: auto;
   padding: 0;
-  border: 5px solid #a22e1f;
+  border: 5px solid var(--modal-border-color);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #ffffff;
+  box-shadow: var(--modal-box-shadow);
+  background-color: var(--additional-font-color);
 }
 
 @-webkit-keyframes animatetop {
@@ -226,20 +227,20 @@ input[type="checkbox"]:checked + label:before {
   float: right;
   font-size: 28px;
   font-weight: bold;
-  color: white;
+  color: var(--additional-font-color);
 }
 
 .close:hover,
 .close:focus {
   text-decoration: none;
   cursor: pointer;
-  color: #000;
+  color: var(--main-other-color);
 }
 
 .modal-header {
   padding: 2px 16px;
-  color: white;
-  background-color: #b02727;
+  color: var(--additional-font-color);
+  background-color: var(--modal-header-background-color);
 }
 
 .modal-body {

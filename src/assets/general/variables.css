@@ -1,15 +1,42 @@
 :root {
-  /* colors */
+  /* colors, shadows and gradients */
   --main-font-color: #d12944;
+  --main-other-color: #000000;
+  --main-background-color: rgba(221, 201, 167, 0.502);
+  --search-inputbtn-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3),
+    0px 4px 4px rgba(0, 0, 0, 0.3), 0px 4px 4px rgba(0, 0, 0, 0.3);
+  --search-input-color: #504e4e;
+  --view-button-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  --view-button-box-shadow-hover: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  --login-input-border: 0.5px solid rgba(0, 0, 0, 0.3);
+  --login-input-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  --slogan-text-shadow: 2px 0 2px #000000, 0 2px 2px #000000, -2px 0 2px #000000,
+    0 -2px 2px #000000;
   --additional-font-color: #ffffff;
   --items-font-color: rgba(0, 0, 0, 0.8);
-  --main-background-color: rgba(221, 201, 167, 0.5);
-  --button-font-color: rgba(255, 255, 255, 0.9);
-  --box-shadow-input-color: rgba(0, 0, 0, 0.25);
-  --border-input-color: rgba(0, 0, 0, 0.4);
-  --correct-font-color: rgba(0, 128, 0, 0.876);
+  --down-arrow-background-color: #d3d3d3;
+  --checkbox-border-color: #cccccc;
+  --input-border-color: rgba(0, 0, 0, 0.4);
+  --button-font-color: rgba(255, 255, 255, 0.902);
+  --input-border: 0.5px solid rgba(0, 0, 0, 0.251);
+  --input-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.251);
+  --recipe-border-color: rgba(0, 0, 0, 0.33);
+  --recipe-msg-box-shadow: 1px 1px 3px #8e2222;
+  --recipe-msg-background-color: #e6c7c7;
+  --recipe-msg-border: 1px solid #999999;
+  --recipe-background-color: rgba(218, 202, 174, 0.5);
+  --modal-border-color: #a22e1f;
+  --modal-header-background-color: #b02727;
+  --modal-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --correct-font-color: rgba(0, 128, 0, 0.875);
+  --divider-linear-gradient: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.7)
+  );
 
   /* fonts */
   --main-font-family: "Jua", sans-serif;
-  --add-font-family: "Junge", serif;
+  --add-font-family: "Junge", sans-serif;
 }

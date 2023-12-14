@@ -34,11 +34,7 @@ form {
 
 .divider:empty {
   height: 25px;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.7)
-  );
+  background-image: var(--divider-linear-gradient);
 }
 
 .input1,
@@ -51,8 +47,8 @@ form {
   display: block;
   margin-top: 1%;
   border-radius: 5px;
-  border: 0.5px solid var(--box-shadow-input-color);
-  box-shadow: 0px 1px 1px var(--box-shadow-input-color);
+  border: var(--input-border);
+  box-shadow: var(--input-box-shadow);
 }
 
 .surname,

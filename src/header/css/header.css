@@ -56,10 +56,10 @@
 
 .login__input {
   padding: 5px;
-  border: 0.5px solid var(--box-shadow-input-color);
-  box-shadow: 0px 1px 1px var(--box-shadow-input-color);
+  border: var(--login-input-border);
   border-radius: 5px;
-  color: var(--border-input-color);
+  box-shadow: var(--login-input-box-shadow);
+  color: var(--input-border-color);
 }
 
 .login__input:first-child {
@@ -68,7 +68,7 @@
 }
 
 .button_color {
-  color: var(--border-input-color);
+  color: var(--input-border-color);
 }
 
 .form label {

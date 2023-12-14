@@ -25,7 +25,7 @@ img {
   line-height: 85px;
   text-align: center;
   letter-spacing: 0.07em;
-  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+  text-shadow: var(--slogan-text-shadow);
   color: var(--additional-font-color);
 }
 
@@ -72,11 +72,9 @@ img {
   border: none;
   outline: none;
   vertical-align: middle;
-  box-shadow: 0px 4px 4px var(--box-shadow-input-color),
-    0px 4px 4pxvar (--box-shadow-input-color),
-    0px 4px 4px var(--box-shadow-input-color);
-  color: #504e4e;
-  background-color: #ffff;
+  box-shadow: var(--search-inputbtn-box-shadow);
+  color: var(--search-input-color);
+  background-color: var(--additional-font-color);
 }
 
 .search__button {
@@ -87,9 +85,7 @@ img {
   border: none;
   vertical-align: middle;
   cursor: pointer;
-  box-shadow: 0px 4px 4px var(--box-shadow-input-color),
-    0px 4px 4pxvar (--box-shadow-input-color),
-    0px 4px 4px var(--box-shadow-input-color);
+  box-shadow: var(--search-inputbtn-box-shadow);
   color: var(--button-font-color);
   background: var(--main-font-color);
 }
@@ -103,7 +99,7 @@ img {
   text-align: center;
   font-size: 2rem;
   letter-spacing: 0.2em;
-  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+  text-shadow: var(--slogan-text-shadow);
   color: var(--additional-font-color);
 }
 
@@ -114,7 +110,7 @@ img {
   bottom: 5%;
   width: 50px;
   border-radius: 100px;
-  background-color: lightgrey;
+  background-color: var(--down-arrow-background-color);
 }
 
 #result__section {
@@ -166,7 +162,7 @@ img {
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  box-shadow: 0px 4px 4px var(--box-shadow-input-color);
+  box-shadow: var(--view-button-box-shadow);
   color: var(--button-font-color);
   background: var(--main-font-color);
 }
@@ -174,5 +170,5 @@ img {
 .view-button:hover {
   transform: scale(0.99);
   transition: 0.5s;
-  box-shadow: 0px 2px 2px var(--box-shadow-input-color);
+  box-shadow: var(--view-button-box-shadow-hover);
 }

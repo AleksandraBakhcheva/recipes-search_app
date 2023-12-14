@@ -25,7 +25,6 @@ img {
 
 .result__container {
   display: grid;
-  width: 100%;
   max-width: 100%;
   padding-bottom: 30px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -81,7 +80,7 @@ img {
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  box-shadow: 0px 4px 4px var(--box-shadow-input-color);
+  box-shadow: var(--view-button-box-shadow);
   color: var(--button-font-color);
   background: var(--main-font-color);
 }
@@ -89,5 +88,5 @@ img {
 .view-button:hover {
   transform: scale(0.99);
   transition: 0.5s;
-  box-shadow: 0px 2px 2px var(--box-shadow-input-color);
+  box-shadow: var(--view-button-box-shadow-hover);
 }

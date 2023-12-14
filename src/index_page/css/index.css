@@ -7,8 +7,6 @@
 
 /* home page */
 @import url(home.css);
-
-/* home_page media queries */
 @import url(home_media_queries.css);
 
 /* footer style */
