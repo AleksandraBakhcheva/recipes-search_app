@@ -5,33 +5,27 @@
   background-color: var(--additional-font-color);
 }
 
+footer {
+  padding: 2% 0;
+}
+
 .footer__container {
-  width: 90vw;
-  height: 15vh;
-  margin: 0 auto;
-  align-items: center;
+  height: 100px;
+  text-align: center;
   color: var(--main-font-color);
 }
 
-.logo_footer {
-  text-align: center;
-}
-
 .logo__img_footer {
-  width: 7%;
+  width: 10%;
 }
 
 .copyright {
-  margin-top: 0;
+  margin: 0;
   text-align: center;
   font-size: 1rem;
 }
 
 @media screen and (max-width: 1023px) {
-  .footer__container {
-    height: 10vh;
-  }
-
   .copyright {
     font-size: 0.7rem;
   }
