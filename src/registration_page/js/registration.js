@@ -15,9 +15,8 @@ registrationForm.addEventListener("submit", function (event) {
   checkInput();
 });
 
-function setErrorMessage(input, msg) {
+function setErrorMessage(input) {
   document.querySelector(input).style.color = ERRORCOLOR;
-  document.querySelector(msg).innerHTML = IMPORTANTMESSAGE;
 }
 
 function isFieldEmpty(field) {

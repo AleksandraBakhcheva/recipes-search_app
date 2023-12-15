@@ -1,7 +1,10 @@
 body {
+  color: var(--items-font-color);
+}
+
+.container-background {
   background-image: url(../../assets/images/registration-form-background.jpeg);
   background-size: cover;
-  color: var(--items-font-color);
 }
 
 h1,
@@ -16,13 +19,12 @@ h3 {
 
 .container {
   max-width: 60%;
-  margin: 3% auto;
+  margin: 0 auto;
 }
 
 form {
-  margin: 2% 0;
   border-radius: 5px;
-  background-color: var(--additional-font-color);
+  background-color: var(--form-background-color);
 }
 
 .form__header {
@@ -109,19 +111,19 @@ form {
   color: var(--main-font-color);
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    background-image: url(../../assets/images/mobile-background.png);
-    background-size: contain;
-  }
+.register__button:hover {
+  transform: scale(0.99);
+  transition: 0.5s;
+  box-shadow: var(--view-button-box-shadow-hover);
+}
 
+@media screen and (max-width: 768px) {
   .form__header {
     height: 43vh;
   }
 
   .container {
     max-width: 100%;
-    margin: 36% auto;
   }
 
   div h2 {
