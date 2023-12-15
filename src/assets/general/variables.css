@@ -1,6 +1,11 @@
 :root {
   /* colors, shadows and gradients */
   --main-font-color: #d12944;
+  --name-background-color: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
   --main-other-color: #000000;
   --main-background-color: rgba(221, 201, 167, 0.502);
   --search-inputbtn-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3),
@@ -12,7 +17,8 @@
   --login-input-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
   --slogan-text-shadow: 2px 0 2px #000000, 0 2px 2px #000000, -2px 0 2px #000000,
     0 -2px 2px #000000;
-  --additional-font-color: #ffffff;
+  --additional-font-color: rgb(255, 255, 255);
+  --form-background-color: rgba(255, 255, 255, 0.7);
   --items-font-color: rgba(0, 0, 0, 0.8);
   --down-arrow-background-color: #d3d3d3;
   --checkbox-border-color: #cccccc;
@@ -32,8 +38,8 @@
   --correct-font-color: rgba(0, 128, 0, 0.875);
   --divider-linear-gradient: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.7)
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.4)
   );
 
   /* fonts */
