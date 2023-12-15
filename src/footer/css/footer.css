@@ -2,21 +2,19 @@
 @import url(../../assets/general/variables.css);
 
 .footer__container_color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
   background-color: var(--additional-font-color);
 }
 
-footer {
-  padding: 2% 0;
-}
-
 .footer__container {
-  height: 100px;
   text-align: center;
-  color: var(--main-font-color);
 }
 
 .logo__img_footer {
-  width: 10%;
+  width: 50%;
 }
 
 .copyright {
