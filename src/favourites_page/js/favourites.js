@@ -16,7 +16,7 @@ let dataArr = [];
 
 function checkRegistration() {
   if (email && email != "") {
-    welcomeMsg.textContent = `Welcome, ${names[i]}`;
+    welcomeMsg.innerHTML = `Welcome, <span>${names[i]}</span>`;
     welcomeMsg.classList.add("welcome-msg");
     if (arrFavorites) {
       arrFavorites = JSON.parse(arrFavorites);

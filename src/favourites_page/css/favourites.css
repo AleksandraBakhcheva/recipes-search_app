@@ -14,9 +14,18 @@ img {
   background-color: var(--main-background-color);
 }
 
+.welcome-msg {
+  margin: 0 5%;
+  background: var(--name-background-color);
+}
+
 .welcome-msg,
 .fav_title {
   text-align: center;
+}
+
+span {
+  color: var(--items-font-color);
 }
 
 .result__section {
