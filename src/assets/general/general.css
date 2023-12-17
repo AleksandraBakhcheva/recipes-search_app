@@ -4,9 +4,17 @@
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Jua&family=Junge&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
+  max-width: 144rem;
+  margin: 0 auto;
+  font-family: var(--main-font-family);
   font-style: normal;
   font-weight: 400;
   color: var(--main-font-color);
-  font-family: var(--main-font-family);
 }
