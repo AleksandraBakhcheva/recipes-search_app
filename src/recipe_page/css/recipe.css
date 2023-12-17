@@ -249,8 +249,9 @@ input[type="checkbox"]:checked + label:before {
   padding: 2px 16px;
 }
 
-.shoplist p {
+.shoplist li {
   padding: 2%;
+  list-style: square;
   color: var(--correct-font-color);
 }
 

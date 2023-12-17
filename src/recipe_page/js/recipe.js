@@ -160,9 +160,9 @@ function addToShopList(data) {
   }
   let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
   for (let checkbox of checkboxes) {
-    let p = document.createElement("p");
-    p.textContent = checkbox.parentNode.innerText;
-    shopList.append(p);
+    let li = document.createElement("li");
+    li.textContent = checkbox.parentNode.innerText;
+    shopList.append(li);
   }
 
   span.onclick = function () {
