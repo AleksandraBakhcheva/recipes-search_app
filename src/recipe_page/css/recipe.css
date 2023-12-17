@@ -224,7 +224,6 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .close {
-  float: right;
   font-size: 28px;
   font-weight: bold;
   color: var(--additional-font-color);
@@ -238,7 +237,10 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .modal-header {
-  padding: 2px 16px;
+  display: flex;
+  padding: 16px 16px;
+  justify-content: space-between;
+  align-items: center;
   color: var(--additional-font-color);
   background-color: var(--modal-header-background-color);
 }
@@ -247,8 +249,9 @@ input[type="checkbox"]:checked + label:before {
   padding: 2px 16px;
 }
 
-.shoplist {
-  font-family: Arial, Helvetica, sans-serif;
+.shoplist p {
+  padding: 2%;
+  color: var(--correct-font-color);
 }
 
 @media screen and (max-width: 992px) {
