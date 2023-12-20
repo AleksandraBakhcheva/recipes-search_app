@@ -102,7 +102,6 @@ function checkFavorites() {
       email: email,
       favRecipes: [],
     });
-    console.log(arrFavorites);
   }
   return arrFavorites;
 }

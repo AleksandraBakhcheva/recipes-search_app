@@ -56,7 +56,6 @@ async function sendApiRequest() {
     let response = await fetch(
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${input.value}`
     );
-    console.log(response);
     let data = await response.json();
     generateHtml(data.meals);
   } catch (error) {
