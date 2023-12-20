@@ -9,6 +9,9 @@ let users = [];
 let passwords = [];
 let names = [];
 
+let modal = document.querySelector(".modal-registration");
+let modalClose = document.querySelector(".modal-close");
+
 let registrationForm = document.querySelector(".registration__form");
 registrationForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -64,9 +67,18 @@ function checkInput() {
     localStorage.setItem("usernames", JSON.stringify(names));
     localStorage.setItem("useremails", JSON.stringify(users));
     localStorage.setItem("userpasswords", JSON.stringify(passwords));
-    window.location.href = "index.html";
+    modal.style.display = "block";
+    document.querySelector(".registration__form").reset();
+    let labels = document.querySelectorAll("label");
+    for (let label of labels) {
+      label.style.color = ERRORCOLOR;
+    }
   }
 }
+
+modalClose.onclick = function () {
+  modal.style.display = "none";
+};
 
 function provideInput(input, clear) {
   document.querySelector(input).style.color = CORRECTCOLOR;
