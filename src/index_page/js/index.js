@@ -40,7 +40,7 @@ function renderRandom(randomArr) {
                     <h2 class="item-name">${randomArr[r].strMeal}</h2>
                     <h3 class="item-area">${randomArr[r].strArea}</h3>
                 </div>
-                <button class="view-button" onclick="window.location.href ='recipe.html?id=${randomArr[r].idMeal}'">View recipe</button>
+                <button class="view-button" onclick="window.location.href ='src/recipe.html?id=${randomArr[r].idMeal}'">View recipe</button>
             </div>            
         </div>`;
   result.innerHTML = generatedHTML;
@@ -78,7 +78,7 @@ function generateHtml(results) {
                     <h2 class="item-name">${result.strMeal}</h2>
                     <h3 class="item-area">${result.strArea}</h3>
                 </div>
-                <button class="view-button" onclick="window.location.href ='recipe.html?id=${result.idMeal}'">View recipe</button>
+                <button class="view-button" onclick="window.location.href ='src/recipe.html?id=${result.idMeal}'">View recipe</button>
             </div>            
         </div>`;
   });

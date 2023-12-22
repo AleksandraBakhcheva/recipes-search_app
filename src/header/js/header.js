@@ -4,13 +4,13 @@ class MyHeader extends HTMLElement {
     <div class="header__container_color">
       <div class="header__container">
         <div class="logo">
-          <a href="index.html">
+          <a href="../index.html">
             <img class="logo__img" src="assets/images/logo.svg" alt="logo" />
           </a>
         </div>
         <nav class="nav">
           <ul class="menu__list">
-            <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="../index.html" class="menu__link">Home</a></li>
             <li class="menu__item"><button class="menu__link menu__link_button">Sign in</button></li>
             <li class="menu__item"><a href="registration.html" class="menu__link">Register</a>
             </li>
